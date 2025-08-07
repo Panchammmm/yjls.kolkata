@@ -15,7 +15,7 @@ const Footer = () => {
               <div className="font-bold text-lg">Yume</div>
             </div>
             <p className="text-primary-foreground/80 text-sm">
-              South Kolkata's premier Japanese language institute. Learn Japanese the fun and easy way!
+              Kolkata's premier Japanese language institute. Learn Japanese the fun and easy way!
             </p>
           </div>
 
