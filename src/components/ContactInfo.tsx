@@ -19,7 +19,7 @@ import {
 interface ContactAction {
   text: string;
   link: string;
-  isCustomHandler?: boolean; // Add this to identify custom handlers
+  isCustomHandler?: boolean;
 }
 
 interface ContactInfoItem {
@@ -65,7 +65,6 @@ Warm regards,
     try {
       window.location.href = mailtoLink;
     } catch (error) {
-      // Fallback: copy email to clipboard and show notification
       navigator.clipboard.writeText(email).then(() => {
         alert(`Email address copied to clipboard: ${email}\nPlease paste it into your email client.`);
       });
@@ -82,25 +81,25 @@ Warm regards,
 
   const contactInfo: ContactInfoItem[] = [
     {
-      icon: <MapPin className="h-6 w-6" />,
+      icon: <MapPin className="h-5 w-5 sm:h-6 sm:w-6" />,
       title: "Address",
       details: ["Mali Pukria, near IILDS Hospital", "Rajpur Sonarpur, Kolkata", "West Bengal 700150"],
       action: { text: "Get Directions", link: "https://maps.app.goo.gl/NyC6MFCtXFqLYXfz5" }
     },
     {
-      icon: <Phone className="h-6 w-6" />,
+      icon: <Phone className="h-5 w-5 sm:h-6 sm:w-6" />,
       title: "Phone",
       details: ["+91 80130 72585", "+91 87776 71272", "Available: 9 AM - 8 PM"],
       action: { text: "Call Now", link: "tel:+918013072585" }
     },
     {
-      icon: <Mail className="h-6 w-6" />,
+      icon: <Mail className="h-5 w-5 sm:h-6 sm:w-6" />,
       title: "Email",
       details: ["Yumejapaneseschool@gmail.com", "Quick response guaranteed", "Available 24/7"],
       action: { text: "Send Email", link: "#", isCustomHandler: true }
     },
     {
-      icon: <Clock className="h-6 w-6" />,
+      icon: <Clock className="h-5 w-5 sm:h-6 sm:w-6" />,
       title: "Hours",
       details: ["Mon - Sat: 9:00 AM - 8:00 PM", "Sunday: 10:00 AM - 6:00 PM"],
       action: { text: "Book a Free Trial", link: "tel:+918670035037" }
@@ -108,19 +107,21 @@ Warm regards,
   ];
 
   return (
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 gap-6">
+    <div className="space-y-4 sm:space-y-6">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6">
         {contactInfo.map((info, index) => (
           <Card key={index} className="hover:shadow-soft transition-all duration-300 group">
-            <CardContent className="p-4 sm:p-6">
-              <div className="flex items-start space-x-4">
-                <div className="text-primary mt-1 group-hover:scale-110 transition-transform">
+            <CardContent className="p-3 sm:p-4 md:p-6">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="text-primary mt-0.5 sm:mt-1 group-hover:scale-110 transition-transform flex-shrink-0">
                   {info.icon}
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-semibold text-foreground text-base sm:text-lg mb-2">{info.title}</h3>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-semibold text-foreground text-sm sm:text-base md:text-lg mb-1 sm:mb-2">
+                    {info.title}
+                  </h3>
                   {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-muted-foreground text-sm mb-1">
+                    <p key={idx} className="text-muted-foreground text-xs sm:text-sm mb-0.5 sm:mb-1 leading-relaxed">
                       {detail}
                     </p>
                   ))}
@@ -128,7 +129,7 @@ Warm regards,
                     <Button
                       variant="outline"
                       size="sm"
-                      className="mt-3"
+                      className="mt-2 sm:mt-3 h-8 sm:h-9 px-3 sm:px-4 text-xs sm:text-sm"
                       onClick={() => handleActionClick(info.action!)}
                     >
                       {info.action.text}
@@ -143,23 +144,25 @@ Warm regards,
 
       {/* WhatsApp Quick Contact */}
       <Card className="hover:shadow-soft transition-all duration-300 bg-green-50 border-green-200">
-        <CardContent className="p-4 sm:p-6">
-          <h3 className="font-semibold text-foreground text-base sm:text-lg mb-4 flex items-center gap-2">
-            <MessageCircle className="h-5 w-5 text-green-600" />
-            Quick WhatsApp Contact
+        <CardContent className="p-3 sm:p-4 md:p-6">
+          <h3 className="font-semibold text-foreground text-sm sm:text-base md:text-lg mb-3 sm:mb-4 flex items-center gap-2">
+            <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 flex-shrink-0" />
+            <span>Quick WhatsApp Contact</span>
           </h3>
-          <div className="space-y-3">
+          <div className="space-y-2 sm:space-y-3">
             <a
               href="https://wa.me/918013072585?text=Hello%20YJLS%21%20I%20saw%20your%20website%20and%20I%27m%20impressed%20with%20your%20course%20offerings.%20Can%20you%20guide%20me%20on%20which%20Japanese%20course%20would%20be%20best%20for%20me%3F"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group"
+              className="flex items-center justify-between p-2 sm:p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group min-h-[44px]"
             >
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-green-700 font-medium">+91 80130 72585</span>
+              <div className="flex items-center gap-2 min-w-0 flex-1">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0"></div>
+                <span className="text-green-700 font-medium text-xs sm:text-sm truncate">
+                  +91 80130 72585
+                </span>
               </div>
-              <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700">
+              <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700 h-8 px-2 sm:px-3 text-xs sm:text-sm flex-shrink-0 ml-2">
                 Chat Now
               </Button>
             </a>
@@ -167,13 +170,15 @@ Warm regards,
               href="https://wa.me/918670035037?text=Hello%20YJLS%21%20I%20saw%20your%20website%20and%20I%27m%20impressed%20with%20your%20course%20offerings.%20Can%20you%20guide%20me%20on%20which%20Japanese%20course%20would%20be%20best%20for%20me%3F"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group"
+              className="flex items-center justify-between p-2 sm:p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group min-h-[44px]"
             >
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-green-700 font-medium">+91 8670035037</span>
+              <div className="flex items-center gap-2 min-w-0 flex-1">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0"></div>
+                <span className="text-green-700 font-medium text-xs sm:text-sm truncate">
+                  +91 8670035037
+                </span>
               </div>
-              <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700">
+              <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700 h-8 px-2 sm:px-3 text-xs sm:text-sm flex-shrink-0 ml-2">
                 Chat Now
               </Button>
             </a>
@@ -181,17 +186,19 @@ Warm regards,
               href="https://wa.me/918777671272?text=Hello%20YJLS%21%20I%20saw%20your%20website%20and%20I%27m%20impressed%20with%20your%20course%20offerings.%20Can%20you%20guide%20me%20on%20which%20Japanese%20course%20would%20be%20best%20for%20me%3F"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group"
+              className="flex items-center justify-between p-2 sm:p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group min-h-[44px]"
             >
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-green-700 font-medium">+91 87776 71272</span>
+              <div className="flex items-center gap-2 min-w-0 flex-1">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0"></div>
+                <span className="text-green-700 font-medium text-xs sm:text-sm truncate">
+                  +91 87776 71272
+                </span>
               </div>
-              <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700">
+              <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700 h-8 px-2 sm:px-3 text-xs sm:text-sm flex-shrink-0 ml-2">
                 Chat Now
               </Button>
             </a>
-            <p className="text-xs text-green-600 mt-2">
+            <p className="text-xs text-green-600 mt-2 leading-relaxed">
               💬 Get instant responses to your questions!
             </p>
           </div>
@@ -200,9 +207,11 @@ Warm regards,
 
       {/* Social Media */}
       <Card className="hover:shadow-soft transition-all duration-300">
-        <CardContent className="p-4 sm:p-6">
-          <h3 className="font-semibold text-foreground text-base sm:text-lg mb-4">Follow Us</h3>
-          <div className="flex space-x-4">
+        <CardContent className="p-3 sm:p-4 md:p-6">
+          <h3 className="font-semibold text-foreground text-sm sm:text-base md:text-lg mb-3 sm:mb-4">
+            Follow Us
+          </h3>
+          <div className="flex flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start">
             <div
               onClick={() =>
                 window.open(
@@ -210,7 +219,7 @@ Warm regards,
                   "_blank"
                 )
               }
-              className="p-3 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors cursor-pointer group relative"
+              className="p-2.5 sm:p-3 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors cursor-pointer group relative min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Facebook"
               title="Facebook"
             >
@@ -226,7 +235,7 @@ Warm regards,
                   "_blank"
                 )
               }
-              className="p-3 bg-pink-50 text-pink-600 rounded-lg hover:bg-pink-100 transition-colors cursor-pointer group relative"
+              className="p-2.5 sm:p-3 bg-pink-50 text-pink-600 rounded-lg hover:bg-pink-100 transition-colors cursor-pointer group relative min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Instagram"
               title="Instagram"
             >
@@ -242,7 +251,7 @@ Warm regards,
                   "_blank"
                 )
               }
-              className="p-3 bg-green-50 text-green-600 rounded-lg hover:bg-green-100 transition-colors cursor-pointer group relative"
+              className="p-2.5 sm:p-3 bg-green-50 text-green-600 rounded-lg hover:bg-green-100 transition-colors cursor-pointer group relative min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="WhatsApp Channel"
               title="WhatsApp Channel"
             >
@@ -252,7 +261,7 @@ Warm regards,
               </div>
             </div>
           </div>
-          <p className="text-muted-foreground text-sm mt-4">
+          <p className="text-muted-foreground text-xs sm:text-sm mt-3 sm:mt-4 leading-relaxed text-center sm:text-left">
             🌟 Stay updated with our latest courses, events, and student success stories!
           </p>
         </CardContent>

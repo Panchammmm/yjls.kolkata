@@ -142,64 +142,64 @@ Timestamp: ${new Date().toLocaleString()}
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex justify-center mb-4">
-            <div className="p-3 bg-primary/10 rounded-lg">
-              <MessageCircle className="h-8 w-8 text-primary" />
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-accent">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center">
+          <div className="flex justify-center mb-3 sm:mb-4">
+            <div className="p-2 sm:p-3 bg-primary/10 rounded-lg">
+              <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
             </div>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-2">
             Contact YJLS
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2 sm:px-4">
             Ready to start your Japanese learning journey? Get in touch with us today for course information, enrollment details, or any questions you may have.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm">
-            <div className="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-full">
-              <Shield className="h-4 w-4 text-primary" />
-              <span>Secure Form</span>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6 sm:mt-8 text-xs sm:text-sm px-2">
+            <div className="flex items-center gap-1 sm:gap-2 bg-white/10 px-2 sm:px-3 py-1.5 sm:py-2 rounded-full">
+              <Shield className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+              <span className="whitespace-nowrap">Secure Form</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-full">
-              <Clock className="h-4 w-4 text-primary" />
-              <span>24/7 Available</span>
+            <div className="flex items-center gap-1 sm:gap-2 bg-white/10 px-2 sm:px-3 py-1.5 sm:py-2 rounded-full">
+              <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+              <span className="whitespace-nowrap">24/7 Available</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-full">
-              <Star className="h-4 w-4 text-primary" />
-              <span>Guaranteed Quick Response</span>
+            <div className="flex items-center gap-1 sm:gap-2 bg-white/10 px-2 sm:px-3 py-1.5 sm:py-2 rounded-full">
+              <Star className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+              <span className="whitespace-nowrap">Quick Response</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Contact Form */}
-            <Card className="shadow-elegant">
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl text-foreground flex items-center gap-2">
-                  <Send className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                  Send us a Message
+            <Card className="shadow-elegant order-1">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-lg sm:text-xl md:text-2xl text-foreground flex items-center gap-2">
+                  <Send className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-primary flex-shrink-0" />
+                  <span className="leading-tight">Send us a Message</span>
                 </CardTitle>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs sm:text-sm text-muted-foreground mt-2">
                   Fill out the form below and we'll get back to you within 24 hours
                 </p>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-4 sm:p-6">
                 <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-4 sm:space-y-6">
                   {/* Basic Information */}
-                  <div className="space-y-4">
-                    <h4 className="font-semibold text-foreground flex items-center gap-2">
-                      <Users className="h-4 w-4 text-primary" />
-                      Personal Information
+                  <div className="space-y-3 sm:space-y-4">
+                    <h4 className="font-semibold text-sm sm:text-base text-foreground flex items-center gap-2">
+                      <Users className="h-3 w-3 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
+                      <span>Personal Information</span>
                     </h4>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Full Name *</Label>
+                        <Label htmlFor="name" className="text-sm font-medium">Full Name *</Label>
                         <Input
                           id="name"
                           placeholder="Your full name"
@@ -208,14 +208,16 @@ Timestamp: ${new Date().toLocaleString()}
                             minLength: { value: 2, message: "Name must be at least 2 characters" }
                           })}
                           disabled={isSubmitting}
-                          className={errors.name ? "border-red-500" : ""}
+                          className={`h-10 sm:h-11 ${errors.name ? "border-red-500" : ""}`}
                         />
                         {errors.name && (
-                          <p className="text-sm text-red-500">{errors.name.message}</p>
+                          <p className="text-xs sm:text-sm text-red-500">
+                            {typeof errors.name?.message === "string" ? errors.name.message : null}
+                          </p>
                         )}
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="age">Age</Label>
+                        <Label htmlFor="age" className="text-sm font-medium">Age</Label>
                         <Input
                           id="age"
                           type="number"
@@ -225,17 +227,19 @@ Timestamp: ${new Date().toLocaleString()}
                             max: { value: 80, message: "Age must be less than 80" }
                           })}
                           disabled={isSubmitting}
-                          className={errors.age ? "border-red-500" : ""}
+                          className={`h-10 sm:h-11 ${errors.age ? "border-red-500" : ""}`}
                         />
                         {errors.age && (
-                          <p className="text-sm text-red-500">{errors.age.message}</p>
+                          <p className="text-xs sm:text-sm text-red-500">
+                            {typeof errors.age?.message === "string" ? errors.age.message : null}
+                          </p>
                         )}
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email Address *</Label>
+                        <Label htmlFor="email" className="text-sm font-medium">Email Address *</Label>
                         <Input
                           id="email"
                           type="email"
@@ -248,14 +252,16 @@ Timestamp: ${new Date().toLocaleString()}
                             }
                           })}
                           disabled={isSubmitting}
-                          className={errors.email ? "border-red-500" : ""}
+                          className={`h-10 sm:h-11 ${errors.email ? "border-red-500" : ""}`}
                         />
                         {errors.email && (
-                          <p className="text-sm text-red-500">{errors.email.message}</p>
+                          <p className="text-xs sm:text-sm text-red-500">
+                            {typeof errors.email?.message === "string" ? errors.email.message : null}
+                          </p>
                         )}
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number *</Label>
+                        <Label htmlFor="phone" className="text-sm font-medium">Phone Number *</Label>
                         <Input
                           id="phone"
                           placeholder="+91 98765 43210"
@@ -267,30 +273,32 @@ Timestamp: ${new Date().toLocaleString()}
                             }
                           })}
                           disabled={isSubmitting}
-                          className={errors.phone ? "border-red-500" : ""}
+                          className={`h-10 sm:h-11 ${errors.phone ? "border-red-500" : ""}`}
                         />
                         {errors.phone && (
-                          <p className="text-sm text-red-500">{errors.phone.message}</p>
+                          <p className="text-xs sm:text-sm text-red-500">
+                            {typeof errors.phone?.message === "string" ? errors.phone.message : null}
+                          </p>
                         )}
                       </div>
                     </div>
                   </div>
 
                   {/* Course Information */}
-                  <div className="space-y-4">
-                    <h4 className="font-semibold text-foreground flex items-center gap-2">
-                      <BookOpen className="h-4 w-4 text-primary" />
-                      Course Information
+                  <div className="space-y-3 sm:space-y-4">
+                    <h4 className="font-semibold text-sm sm:text-base text-foreground flex items-center gap-2">
+                      <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
+                      <span>Course Information</span>
                     </h4>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="course">Course Interest</Label>
+                        <Label htmlFor="course" className="text-sm font-medium">Course Interest</Label>
                         <Select 
                           value={courseValue || ""} 
                           onValueChange={(value) => setValue("course", value)}
                         >
-                          <SelectTrigger>
+                          <SelectTrigger className="h-10 sm:h-11">
                             <SelectValue placeholder="Select a course" />
                           </SelectTrigger>
                           <SelectContent>
@@ -307,12 +315,12 @@ Timestamp: ${new Date().toLocaleString()}
                         </Select>
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="experience">Experience Level</Label>
+                        <Label htmlFor="experience" className="text-sm font-medium">Experience Level</Label>
                         <Select 
                           value={watch("experience") || ""} 
                           onValueChange={(value) => setValue("experience", value)}
                         >
-                          <SelectTrigger>
+                          <SelectTrigger className="h-10 sm:h-11">
                             <SelectValue placeholder="Your Japanese level" />
                           </SelectTrigger>
                           <SelectContent>
@@ -329,16 +337,22 @@ Timestamp: ${new Date().toLocaleString()}
                     {/* Additional Services */}
                     <div className="space-y-3">
                       <Label className="text-sm font-medium">Additional Services (Optional)</Label>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                         {additionalServices.map((service) => (
-                          <div key={service} className="flex items-center space-x-2">
+                          <div key={service} className="flex items-start space-x-2">
                             <Checkbox
                               id={service}
                               checked={selectedServices.includes(service)}
                               onCheckedChange={(checked) => handleServiceChange(service, checked)}
                               disabled={isSubmitting}
+                              className="mt-0.5 flex-shrink-0"
                             />
-                            <Label htmlFor={service} className="text-sm">{service}</Label>
+                            <Label 
+                              htmlFor={service} 
+                              className="text-xs sm:text-sm leading-tight cursor-pointer"
+                            >
+                              {service}
+                            </Label>
                           </div>
                         ))}
                       </div>
@@ -346,41 +360,48 @@ Timestamp: ${new Date().toLocaleString()}
                   </div>
 
                   {/* Priority & Timing */}
-                  <div className="space-y-4">
-                    <h4 className="font-semibold text-foreground flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-primary" />
-                      Priority & Timing
+                  <div className="space-y-3 sm:space-y-4">
+                    <h4 className="font-semibold text-sm sm:text-base text-foreground flex items-center gap-2">
+                      <Calendar className="h-3 w-3 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
+                      <span>Priority & Timing</span>
                     </h4>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div className="space-y-3">
                         <Label className="text-sm font-medium">Urgency Level</Label>
                         <RadioGroup
                           value={urgencyLevel || ""}
                           onValueChange={(value) => setValue("urgency", value)}
+                          className="space-y-2"
                         >
-                          <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="high" id="high" />
-                            <Label htmlFor="high" className="text-sm">High - Need to start ASAP</Label>
+                          <div className="flex items-start space-x-2">
+                            <RadioGroupItem value="high" id="high" className="mt-0.5 flex-shrink-0" />
+                            <Label htmlFor="high" className="text-xs sm:text-sm leading-tight cursor-pointer">
+                              High - Need to start ASAP
+                            </Label>
                           </div>
-                          <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="medium" id="medium" />
-                            <Label htmlFor="medium" className="text-sm">Medium - Within 2 weeks</Label>
+                          <div className="flex items-start space-x-2">
+                            <RadioGroupItem value="medium" id="medium" className="mt-0.5 flex-shrink-0" />
+                            <Label htmlFor="medium" className="text-xs sm:text-sm leading-tight cursor-pointer">
+                              Medium - Within 2 weeks
+                            </Label>
                           </div>
-                          <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="low" id="low" />
-                            <Label htmlFor="low" className="text-sm">Low - Just exploring</Label>
+                          <div className="flex items-start space-x-2">
+                            <RadioGroupItem value="low" id="low" className="mt-0.5 flex-shrink-0" />
+                            <Label htmlFor="low" className="text-xs sm:text-sm leading-tight cursor-pointer">
+                              Low - Just exploring
+                            </Label>
                           </div>
                         </RadioGroup>
                       </div>
 
                       <div className="space-y-2">
-                        <Label>Preferred Contact Time</Label>
+                        <Label className="text-sm font-medium">Preferred Contact Time</Label>
                         <Select 
                           value={preferredTime} 
                           onValueChange={setPreferredTime}
                         >
-                          <SelectTrigger>
+                          <SelectTrigger className="h-10 sm:h-11">
                             <SelectValue placeholder="When to contact you" />
                           </SelectTrigger>
                           <SelectContent>
@@ -395,30 +416,32 @@ Timestamp: ${new Date().toLocaleString()}
 
                   {/* Message */}
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message" className="text-sm font-medium">Message</Label>
                     <Textarea
                       id="message"
                       placeholder="Tell us about your goals, questions, or how we can help you..."
                       rows={4}
                       {...register("message")}
                       disabled={isSubmitting}
+                      className="min-h-[100px] resize-none"
                     />
                   </div>
 
                   {/* Newsletter & Terms */}
                   <div className="space-y-3">
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-start space-x-2">
                       <Checkbox
                         id="newsletter"
-                        checked={newsletter || false}  // ✅ Fixed: Ensure boolean value
+                        checked={newsletter || false}
                         onCheckedChange={(checked) => setValue("newsletter", checked)}
                         disabled={isSubmitting}
+                        className="mt-0.5 flex-shrink-0"
                       />
-                      <Label htmlFor="newsletter" className="text-sm">
+                      <Label htmlFor="newsletter" className="text-xs sm:text-sm leading-tight cursor-pointer">
                         Subscribe to our newsletter for course updates and Japanese learning tips
                       </Label>
                     </div>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-muted-foreground leading-relaxed">
                       By submitting this form, you agree to be contacted by YJLS regarding your inquiry. 
                       We respect your privacy and won't share your information with third parties.
                     </p>
@@ -428,18 +451,18 @@ Timestamp: ${new Date().toLocaleString()}
                     type="submit" 
                     variant="hero" 
                     size="lg" 
-                    className="w-full group"
+                    className="w-full h-11 sm:h-12 group text-sm sm:text-base"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Sending Message...
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin flex-shrink-0" />
+                        <span>Sending Message...</span>
                       </>
                     ) : (
                       <>
-                        <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                        Send Message
+                        <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                        <span>Send Message</span>
                       </>
                     )}
                   </Button>
@@ -447,18 +470,18 @@ Timestamp: ${new Date().toLocaleString()}
                   {/* Success/Error Message */}
                   {result && (
                     <div 
-                      className={`flex items-start gap-2 p-4 rounded-lg ${
+                      className={`flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-lg ${
                         isSuccess 
                           ? 'bg-green-50 border border-green-200 text-green-700' 
                           : 'bg-red-50 border border-red-200 text-red-700'
                       }`}
                     >
                       {isSuccess ? (
-                        <CheckCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 mt-0.5" />
                       ) : (
-                        <AlertCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                        <AlertCircle className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 mt-0.5" />
                       )}
-                      <p className="text-sm">{result}</p>
+                      <p className="text-xs sm:text-sm leading-relaxed">{result}</p>
                     </div>
                   )}
                 </form>
@@ -466,12 +489,12 @@ Timestamp: ${new Date().toLocaleString()}
             </Card>
 
             {/* Contact Information Component */}
-            <ContactInfo />
+            <div className="order-1 lg:order-2">
+              <ContactInfo />
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Rest of your sections... */}
     </div>
   );
 };
