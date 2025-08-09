@@ -207,11 +207,16 @@ Warm regards,
 
       {/* Social Media */}
       <Card className="hover:shadow-soft transition-all duration-300">
+        <img
+          src="https://i.pinimg.com/originals/d9/e6/e0/d9e6e0126e9cf8ca543a1ca26c9b176c.gif"
+          alt="Chibi Mascot"
+          className="w-14 md:w-20 transform scale-x-[-1] text-right"
+        />
         <CardContent className="p-3 sm:p-4 md:p-6">
           <h3 className="font-semibold text-foreground text-sm sm:text-base md:text-lg mb-3 sm:mb-4">
             Follow Us
           </h3>
-          <div className="flex flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start">
+          <div className="flex flex-wrap gap-3 sm:gap-4 justify-start">
             <div
               onClick={() =>
                 window.open(
