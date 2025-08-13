@@ -151,7 +151,7 @@ Warm regards,
           </h3>
           <div className="space-y-2 sm:space-y-3">
             <a
-              href="https://wa.me/918013072585?text=Hello%20YJLS%21%20I%20saw%20your%20website%20and%20I%27m%20impressed%20with%20your%20course%20offerings.%20Can%20you%20guide%20me%20on%20which%20Japanese%20course%20would%20be%20best%20for%20me%3F"
+              href="https://wa.me/918013072585?text=Hello%20YJLS%21%20I%20visited%20your%20website%20and%20really%20liked%20your%20course%20offerings.%20Could%20we%20discuss%20the%20course%20timings%20and%20fee%20structure%20to%20help%20me%20choose%20the%20best%20option%3F"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-2 sm:p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group min-h-[44px]"
@@ -167,7 +167,7 @@ Warm regards,
               </Button>
             </a>
             <a
-              href="https://wa.me/918670035037?text=Hello%20YJLS%21%20I%20saw%20your%20website%20and%20I%27m%20impressed%20with%20your%20course%20offerings.%20Can%20you%20guide%20me%20on%20which%20Japanese%20course%20would%20be%20best%20for%20me%3F"
+              href="https://wa.me/918670035037?text=Hello%20YJLS%21%20I%20visited%20your%20website%20and%20really%20liked%20your%20course%20offerings.%20Could%20we%20discuss%20the%20course%20timings%20and%20fee%20structure%20to%20help%20me%20choose%20the%20best%20option%3F"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-2 sm:p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group min-h-[44px]"
@@ -183,7 +183,7 @@ Warm regards,
               </Button>
             </a>
             <a
-              href="https://wa.me/918777671272?text=Hello%20YJLS%21%20I%20saw%20your%20website%20and%20I%27m%20impressed%20with%20your%20course%20offerings.%20Can%20you%20guide%20me%20on%20which%20Japanese%20course%20would%20be%20best%20for%20me%3F"
+              href="https://wa.me/918777671272?text=Hello%20YJLS%21%20I%20visited%20your%20website%20and%20really%20liked%20your%20course%20offerings.%20Could%20we%20discuss%20the%20course%20timings%20and%20fee%20structure%20to%20help%20me%20choose%20the%20best%20option%3F"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-2 sm:p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group min-h-[44px]"

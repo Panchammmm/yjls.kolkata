@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import schoolEntrance from "@/assets/school-entrance.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
+import { Tabs, TabsTrigger, TabsList, TabsContent } from "@/components/ui/tabs";
 
 const About = () => {
   const achievements = [
@@ -143,17 +144,17 @@ const About = () => {
                 About Yume Japanese Language School
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-                Established as South Kolkata's premier Japanese language institute, YJLS has been transforming dreams into reality by providing world-class Japanese language education and comprehensive career support.
+                Established as Kolkata's premier Japanese language institute, YJLS has been transforming dreams into reality by providing world-class Japanese language education and comprehensive career support.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button variant="hero" size="lg" className="w-full sm:w-auto group">
-                  <Users className="h-4 w-4 mr-2" />
-                  Join Our Family
+                  <BookOpen className="h-4 w-4 mr-2" />
+                  View Courses
                   <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  <BookOpen className="h-4 w-4 mr-2 pt-[1px]" />
-                  View Courses
+                  <Sparkles className="h-4 w-4 mr-2 pt-[1px]" />
+                  View Our Gallery
                 </Button>
               </div>
             </div>
@@ -175,8 +176,8 @@ const About = () => {
             <Card className="hover:shadow-elegant transition-all duration-300 group">
               <CardContent className="p-6 sm:p-8">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Target className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                  <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                    <Target className="size-6 text-primary" />
                   </div>
                   <h2 className="text-xl sm:text-2xl font-bold text-foreground">Our Mission</h2>
                 </div>
@@ -189,8 +190,8 @@ const About = () => {
             <Card className="hover:shadow-elegant transition-all duration-300 group">
               <CardContent className="p-6 sm:p-8">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Globe className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                  <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                    <Globe className="size-6 text-primary" />
                   </div>
                   <h2 className="text-xl sm:text-2xl font-bold text-foreground">Our Vision</h2>
                 </div>
@@ -202,6 +203,49 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Mission & Vision as Journey Timeline */}
+      {/* <section className="py-16 bg-background">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="relative">
+            
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"></div>
+            <div className="space-y-16">
+              <div className="flex items-center justify-start">
+                <div className="w-1/2 pr-8 text-right">
+                  <div className="flex items-center justify-end gap-4 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                      <Target className="size-6 text-primary" />
+                    </div>
+                    <h2 className="text-xl sm:text-2xl font-bold text-foreground">Our Mission</h2>
+                  </div>
+                  <p className="text-muted-foreground">
+                    To provide exceptional Japanese language education that empowers students to achieve their personal and professional goals. We believe in making Japanese learning accessible, enjoyable, and effective for everyone, regardless of their background or starting level.
+                  </p>
+                </div>
+                <div className="w-4 h-4 bg-primary rounded-full z-10"></div>
+                <div className="w-1/2"></div>
+              </div>
+
+              <div className="flex items-center justify-end">
+                <div className="w-1/2"></div>
+                <div className="w-4 h-4 bg-primary rounded-full z-10"></div>
+                <div className="w-1/2 pl-8 text-left">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                      <Globe className="size-6 text-primary" />
+                    </div>
+                    <h2 className="text-xl sm:text-2xl font-bold text-foreground">Our Vision</h2>
+                  </div>
+                  <p className="text-muted-foreground">
+                    To be the leading bridge between India and Japan, fostering cultural understanding and creating global opportunities. We envision a future where language barriers don't limit dreams, and every student can confidently pursue their aspirations in Japan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
 
       {/* Achievements */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-primary text-primary-foreground">
@@ -252,7 +296,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {values.map((value, index) => (
               <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 group">
                 <CardContent className="p-4 sm:p-6">

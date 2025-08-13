@@ -18,6 +18,7 @@ import {
   MessageSquareText,
   Phone,
   BookOpen,
+  Sparkles,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -104,7 +105,7 @@ const Testimonials = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
+      <section className="relative py-12 sm:py-20 bg-gradient-accent">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h1 className="text-2xl sm:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Student Success Stories
@@ -258,33 +259,39 @@ const Testimonials = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-20 bg-gradient-to-r from-primary to-secondary text-white text-center px-4">
-        <h2 className="text-xl sm:text-4xl font-bold mb-3 sm:mb-4">
-          Ready to Start Your Japanese Journey?
-        </h2>
-        <p className="text-base sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto">
-          Join hundreds of successful students who have achieved their dreams
-          with Yume Japanese Language School.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <Button
-            asChild
-            size="lg"
-            className="rounded-2xl px-5 py-3 bg-white text-primary font-semibold hover:bg-white/70"
-          >
-            <a href="/courses" className="flex items-center gap-2">
-              <BookOpen className="w-5 h-5" /> View Our Courses
-            </a>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            className="rounded-2xl px-5 py-3 border bg-transparent border-white text-white hover:bg-white/20"
-          >
-            <a href="tel:+918670035037" className="flex items-center gap-2">
-              <Phone className="w-5 h-5" /> Book a Free Class
-            </a>
-          </Button>
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-hero text-primary-foreground">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center mb-6">
+            <div className="p-4 bg-white/10 rounded-lg">
+              <Sparkles className="h-6 w-6 text-secondary" />
+            </div>
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
+            Ready to Start Your Japanese Journey?
+          </h2>
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 leading-relaxed">
+            Join hundreds of successful students who have achieved their dreams with Yume Japanese Language School.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="rounded-2xl px-5 py-3 bg-white text-primary font-semibold hover:bg-white/70"
+            >
+              <a href="/courses" className="flex items-center gap-2">
+                <BookOpen className="w-5 h-5" /> View Our Courses
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              className="rounded-2xl px-5 py-3 border bg-transparent border-white text-white hover:bg-white/20"
+            >
+              <a href="tel:+918670035037" className="flex items-center gap-2">
+                <Phone className="w-5 h-5" /> Book a Free Class
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
