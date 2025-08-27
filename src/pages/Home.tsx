@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Users, BookOpen, Award, Globe, Heart } from "lucide-react";
+import { Star, Users, BookOpen, Award, Globe, Heart, Clock, CheckCircle, Play, Calendar, MapPin, Phone, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-classroom.jpg";
 import learningMaterials from "@/assets/learning-materials.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
@@ -51,6 +51,62 @@ const Home = () => {
     }
   ];
 
+  // NEW SECTIONS DATA
+  const courses = [
+    {
+      title: "Beginner Course (N5)",
+      duration: "3 months",
+      price: "₹8,000",
+      features: ["Hiragana & Katakana", "Basic Grammar", "Cultural Introduction"],
+      popular: true
+    },
+    {
+      title: "JLPT Preparation",
+      duration: "2-3 months",
+      price: "₹10,000",
+      features: ["Mock Tests", "Strategy Training", "Quick Results"],
+      popular: false
+    },
+    {
+      title: "Conversational Japanese",
+      duration: "Ongoing",
+      price: "₹6,000/month",
+      features: ["Native Speakers", "Real Scenarios", "Pronunciation"],
+      popular: false
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "Students Taught", description: "Happy learners across all levels" },
+    { number: "95%", label: "Pass Rate", description: "Success in JLPT & NAT exams" },
+    { number: "50+", label: "Visa Success", description: "Students now studying/working in Japan" },
+    { number: "5+", label: "Years Experience", description: "Trusted Japanese education in Kolkata" }
+  ];
+
+  const upcomingEvents = [
+    {
+      date: "15",
+      month: "Sep",
+      title: "Free Japanese Cultural Workshop",
+      time: "2:00 PM - 4:00 PM",
+      type: "Workshop"
+    },
+    {
+      date: "22",
+      month: "Sep",
+      title: "JLPT N5 Mock Test",
+      time: "10:00 AM - 12:00 PM",
+      type: "Test"
+    },
+    {
+      date: "30",
+      month: "Sep",
+      title: "Japan Study Visa Seminar",
+      time: "3:00 PM - 5:00 PM",
+      type: "Seminar"
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -62,8 +118,8 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
         </div>
         
-        <div className="relative z-10 text-center text-primary-foreground max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 animate-fade-in leading-tight">
+        <div className="relative z-10 text-center text-primary-foreground max-w-6xl mx-auto px-8">
+          <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 animate-fade-in leading-tight">
             Learn Japanese the Fun and Easy Way at{" "}
             <span className="text-secondary">Yume Japanese Language School</span>
           </h1>
@@ -82,6 +138,32 @@ const Home = () => {
         </div>
       </section>
 
+      {/* NEW: Statistics Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-primary text-primary-foreground">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
+              Our Success Story
+            </h2>
+            <p className="text-lg sm:text-xl opacity-90 max-w-2xl mx-auto px-4">
+              Numbers that speak for our excellence and dedication
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary mb-2">
+                  {stat.number}
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">{stat.label}</h3>
+                <p className="text-sm sm:text-base opacity-90 leading-relaxed">{stat.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,18 +176,71 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 mx-2 sm:mx-0">
+              <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-4 sm:p-6">
                   <div className="text-primary mb-3 sm:mb-4 flex justify-center">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2">{benefit.title}</h3>
+                  <h3 className="text-md sm:text-xl font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Popular Courses Preview */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+              Popular Courses
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+              Start your Japanese learning journey with our most loved courses
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {courses.map((course, index) => (
+              <Card key={index} className="relative hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                {course.popular && (
+                  <div className="absolute -top-2 left-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-xs font-medium z-10">
+                    Most Popular
+                  </div>
+                )}
+                <CardContent className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2">{course.title}</h3>
+                  <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-3">
+                    <div className="flex items-center space-x-1">
+                      <Clock className="h-4 w-4" />
+                      <span>{course.duration}</span>
+                    </div>
+                    <div className="text-lg font-bold text-primary">{course.price}</div>
+                  </div>
+                  <ul className="space-y-1 mb-4">
+                    {course.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center space-x-2 text-sm">
+                        <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full" size="sm">
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8 sm:mt-12">
+            <Button asChild variant="outline" size="lg">
+              <a href="/courses">View All Courses</a>
+            </Button>
           </div>
         </div>
       </section>
@@ -122,7 +257,7 @@ const Home = () => {
                 <p className="text-base sm:text-lg leading-relaxed text-center lg:text-left">
                   We don't just teach Japanese - we open doors to your future! Our comprehensive support includes:
                 </p>
-                <ul className="space-y-2 sm:space-y-3 max-w-lg mx-auto lg:mx-0">
+                <ul className="space-y-2 sm:space-y-3 max-w-lg ml-2 sm:ml-0 sm:mx-0">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-sm sm:text-base">Student and Job Visa guidance</span>
@@ -158,6 +293,56 @@ const Home = () => {
                 className="rounded-lg shadow-soft w-full h-48 sm:h-64 object-cover"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Upcoming Events */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+              Upcoming Events
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+              Join our free workshops, seminars, and cultural events
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {upcomingEvents.map((event, index) => (
+              <Card key={index} className="hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="text-center">
+                      <div className="text-2xl sm:text-3xl font-bold text-primary">{event.date}</div>
+                      <div className="text-sm text-muted-foreground uppercase">{event.month}</div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium">
+                          {event.type}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-semibold mb-1">{event.title}</h3>
+                      <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                        <Clock className="h-4 w-4" />
+                        <span>{event.time}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <Button className="w-full mt-4" variant="outline" size="sm">
+                    Register Now
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8 sm:mt-12">
+            <Button asChild variant="outline" size="lg">
+              <a href="/events">View All Events</a>
+            </Button>
           </div>
         </div>
       </section>
