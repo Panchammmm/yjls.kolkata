@@ -133,7 +133,7 @@ const About = () => {
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 px-3 sm:px-0">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
