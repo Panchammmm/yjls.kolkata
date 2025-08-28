@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, BookOpen, Award, CheckCircle } from "lucide-react";
+import { Clock, Users, BookOpen, Award, CheckCircle, PhoneOutgoing, School } from "lucide-react";
 import jlptPreparation from "@/assets/jlpt-preparation.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
 
@@ -9,48 +9,38 @@ const Courses = () => {
   const courses = [
     {
       title: "Beginner Course (N5 Level)",
-      duration: "3 months",
-      students: "15 per batch",
+      duration: "6 months",
+      students: "6 per batch",
       description: "Perfect for absolute beginners. Learn Hiragana, Katakana, basic grammar and vocabulary.",
       features: [
         "Hiragana & Katakana mastery",
-        "Basic conversation skills",
         "Elementary grammar patterns",
+        "Basic vocabulary (500+ words)",
+        "Introduction to kanji (100+ characters)",
+        "Basic conversation skills",
         "Cultural introduction",
-        "Interactive exercises"
+        "Interactive exercises",
+        "Listening skills"
       ],
-      price: "₹8,000",
+      price: "₹1,000/month",
       badge: "Most Popular"
     },
     {
       title: "Basic Course (N4 Level)",
-      duration: "4 months",
-      students: "12 per batch",
+      duration: "6-8 months",
+      students: "5 per batch",
       description: "Build on your foundation with intermediate grammar, expanded vocabulary, and practical communication.",
       features: [
         "Extended vocabulary (1,000+ words)",
         "Complex sentence structures",
-        "Practical conversation",
+        "Intermediate kanji practice",
         "Reading comprehension",
-        "Writing practice"
+        "Practical conversation",
+        "Writing practice",
+        "Listening skills"
       ],
-      price: "₹12,000",
+      price: "₹1,500/month",
       badge: "Recommended"
-    },
-    {
-      title: "Intermediate Course (N3 Level)",
-      duration: "6 months",
-      students: "10 per batch",
-      description: "Advanced grammar, business Japanese, and cultural nuances for serious learners.",
-      features: [
-        "Advanced grammar patterns",
-        "Business Japanese basics",
-        "Cultural understanding",
-        "Advanced reading skills",
-        "Formal writing techniques"
-      ],
-      price: "₹18,000",
-      badge: "Professional"
     },
     {
       title: "JLPT Preparation",
@@ -64,13 +54,13 @@ const Courses = () => {
         "Weak area identification",
         "Confidence building"
       ],
-      price: "₹10,000",
+      price: "₹1,500/month",
       badge: "Exam Focus"
     },
     {
       title: "NAT Test Preparation",
       duration: "2 months",
-      students: "8 per batch",
+      students: "5-6 per batch",
       description: "Specialized coaching for NAT (Nihongo Ability Test) with focused practice sessions.",
       features: [
         "NAT-specific curriculum",
@@ -79,13 +69,13 @@ const Courses = () => {
         "Individual attention",
         "Quick result strategies"
       ],
-      price: "₹8,500",
+      price: "₹2,000",
       badge: "Fast Track"
     },
     {
       title: "Conversational Japanese",
       duration: "Ongoing",
-      students: "6 per batch",
+      students: "6-8 per batch",
       description: "Focus on speaking and listening skills for real-world communication and cultural exchange.",
       features: [
         "Native speaker sessions",
@@ -94,7 +84,7 @@ const Courses = () => {
         "Cultural etiquette",
         "Confidence building"
       ],
-      price: "₹6,000/month",
+      price: "₹1,200/month",
       badge: "Practical"
     }
   ];
@@ -152,8 +142,8 @@ const Courses = () => {
               Choose Your Perfect Course
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto">
-              <span className="hidden sm:inline">Structured programs for every level and goal</span>
-              <span className="sm:hidden">Programs for every level</span>
+              <span className="hidden sm:inline">Structured programs for Japanese level and goal</span>
+              <span className="sm:hidden">Programs for Japanese level</span>
             </p>
           </div>
 
@@ -207,8 +197,10 @@ const Courses = () => {
                       </span>
                     </div>
                     <Button className="w-full text-sm sm:text-base py-2 sm:py-3" variant="default">
-                      <span className="hidden sm:inline">Enroll Now</span>
-                      <span className="sm:hidden">Enroll</span>
+                      <a href="/contact" className="flex items-center gap-2 justify-center w-full">
+                        <span className="hidden sm:inline">Enroll Now</span>
+                        <span className="sm:hidden">Enroll</span>
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -275,22 +267,26 @@ const Courses = () => {
               Contact us for a free consultation and find your perfect course
             </span>
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto px-5 sm:px-0">
             <Button 
               variant="hero" 
               size="lg" 
               className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
             >
-              <span className="hidden sm:inline">Book Free Demo Class</span>
-              <span className="sm:hidden">Free Demo Class</span>
+              <a href="tel:+918670035037" className="flex items-center gap-2">
+                <PhoneOutgoing className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                Book a Demo Class
+              </a>
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
               className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
             >
-              <span className="hidden sm:inline">Get Course Details</span>
-              <span className="sm:hidden">Course Details</span>
+              <a href="/about" className="flex items-center gap-2">
+                <School className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                Know Our School
+              </a>
             </Button>
           </div>
         </div>

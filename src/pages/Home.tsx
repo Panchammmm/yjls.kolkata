@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Users, BookOpen, Award, Globe, Heart, Clock, CheckCircle, Play, Calendar, MapPin, Phone, Mail } from "lucide-react";
+import { Star, Users, BookOpen, Award, Globe, Heart, Clock, CheckCircle, School, Play, Calendar, MapPin, Phone, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-classroom.jpg";
 import learningMaterials from "@/assets/learning-materials.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
@@ -132,7 +132,8 @@ const Home = () => {
               <a href="/contact">Start Learning Today</a>
             </Button>
             <Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 border-white text-gray-800 hover:text-gray-700 hover:bg-white">
-              Know Us
+              <School className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+              About Our School
             </Button>
           </div>
         </div>
@@ -156,8 +157,8 @@ const Home = () => {
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary mb-2">
                   {stat.number}
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">{stat.label}</h3>
-                <p className="text-sm sm:text-base opacity-90 leading-relaxed">{stat.description}</p>
+                <h3 className="text-md sm:text-xl font-semibold mb-1 sm:mb-2">{stat.label}</h3>
+                <p className="text-sm sm:text-base opacity-90 leading-relaxed hidden sm:inline">{stat.description}</p>
               </div>
             ))}
           </div>
@@ -176,7 +177,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {benefits.map((benefit, index) => (
               <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-4 sm:p-6">

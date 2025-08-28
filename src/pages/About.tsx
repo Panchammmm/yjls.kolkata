@@ -18,7 +18,8 @@ import {
   Lightbulb,
   Shield,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  PhoneOutgoing
 } from "lucide-react";
 import schoolEntrance from "@/assets/school-entrance.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
@@ -356,11 +357,11 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">
                   Why YJLS is Kolkata's #1 Choice
                 </h2>
               </div>
-              <div className="space-y-4 sm:space-y-5">
+              <div className="space-y-5 ml-2 md:ml-0">
                 {whyChooseFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-4 group">
                     <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors flex-shrink-0">
@@ -405,17 +406,22 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button variant="secondary" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto group">
-              <GraduationCap className="h-4 w-4 mr-2" />
-              Start Your Application
-              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <a href="/contact" className="flex items-center gap-2">
+                <GraduationCap className="h-4 w-4 mr-2" />
+                Start Your Application
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
               className="text-base sm:text-lg px-6 sm:px-8 py-3 border-white text-gray-900 hover:bg-white hover:text-gray-700 w-full sm:w-auto group"
             >
-              <Calendar className="h-4 w-4 mr-2" />
-              Schedule Consultation
+              <a href="tel:+918670035037" className="flex items-center gap-2">
+                <PhoneOutgoing className="h-4 w-4 mr-2" />
+                Book a Demo Class
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform sm:hidden" />
+              </a>
             </Button>
           </div>
         </div>
