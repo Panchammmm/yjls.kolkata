@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import SiteLogo from "@/assets/site-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,10 +25,10 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-primary text-primary-foreground px-4 py-2 rounded-lg font-bold text-xl">
-              夢
+            <div className="bg-gradient-primary text-primary-foreground rounded-full p-[3px]">
+              <img src={SiteLogo} alt="YJLS Logo" className="size-8" />
             </div>
-            <div className="font-bold text-xl text-foreground">Yume</div>
+            <div className="font-bold text-xl text-foreground">YJLS</div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -46,7 +47,9 @@ const Navigation = () => {
               </Link>
             ))}
             <Button variant="hero" size="sm">
-              Enroll Now
+              <a href="/contact">
+                Enroll Now
+              </a>
             </Button>
           </div>
 
@@ -82,7 +85,9 @@ const Navigation = () => {
               ))}
               <div className="px-3 py-2">
                 <Button variant="hero" size="sm" className="w-full">
-                  Enroll Now
+                  <a href="/contact">
+                    Enroll Now
+                  </a>
                 </Button>
               </div>
             </div>

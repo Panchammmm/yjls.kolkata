@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="bg-secondary text-secondary-foreground px-3 py-1 rounded font-bold text-lg">
                 夢
               </div>
-              <div className="font-bold text-lg">Yume</div>
+              <div className="font-bold text-lg">YJLS</div>
             </div>
             <p className="text-primary-foreground/80 text-sm">
               Kolkata's premier Japanese language institute. Learn Japanese the fun and easy way!

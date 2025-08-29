@@ -407,9 +407,9 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button variant="secondary" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto group">
               <a href="/contact" className="flex items-center gap-2">
-                <GraduationCap className="h-4 w-4 mr-2" />
+                <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Start Your Application
-                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 mr-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
             <Button 
@@ -418,9 +418,9 @@ const About = () => {
               className="text-base sm:text-lg px-6 sm:px-8 py-3 border-white text-gray-900 hover:bg-white hover:text-gray-700 w-full sm:w-auto group"
             >
               <a href="tel:+918670035037" className="flex items-center gap-2">
-                <PhoneOutgoing className="h-4 w-4 mr-2" />
+                <PhoneOutgoing className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Book a Demo Class
-                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform sm:hidden" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 mr-2 group-hover:translate-x-1 transition-transform sm:hidden" />
               </a>
             </Button>
           </div>

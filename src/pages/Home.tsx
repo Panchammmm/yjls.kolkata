@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Users, BookOpen, Award, Globe, Heart, Clock, CheckCircle, School, Play, Calendar, MapPin, Phone, Mail } from "lucide-react";
+import { Star, Users, BookOpen, Award, Globe, Heart, Clock, CheckCircle, School, Play, Calendar, MapPin, Phone, Mail, GraduationCap, FileText, MessageCircle, Target, Headphones, Gift, Sparkle, Sparkles, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-classroom.jpg";
 import learningMaterials from "@/assets/learning-materials.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
@@ -11,7 +11,7 @@ const Home = () => {
     {
       icon: <Users className="h-6 w-6 sm:h-8 sm:w-8" />,
       title: "Expert Faculty",
-      description: "Learn from experienced native speakers and certified instructors"
+      description: "Learn from experienced certified instructors with proven teaching expertise"
     },
     {
       icon: <BookOpen className="h-6 w-6 sm:h-8 sm:w-8" />,
@@ -26,32 +26,31 @@ const Home = () => {
     {
       icon: <Globe className="h-6 w-6 sm:h-8 sm:w-8" />,
       title: "Global Opportunities",
-      description: "Access to jobs, education, and visas in Japan"
+      description: "Comprehensive guidance for studying and working in Japan"
     }
   ];
 
   const testimonials = [
     {
-      name: "Priya Sharma",
+      name: "Anirban Mondal",
       rating: 5,
-      text: "The best Japanese language school in Kolkata! Teachers are patient and the methods are so effective.",
-      role: "Student, N3 Level"
+      text: "I'm currently studying Japanese at Yume Japanese Language School and the experience has been fantastic. The teachers are excellent—knowledgeable, patient, and make learning enjoyable.",
+      role: "Current Student"
     },
     {
-      name: "Ravi Poddar",
+      name: "Rohit Sarkar",
       rating: 5,
-      text: "Got my student visa for Japan with their expert guidance. Forever grateful to Yume!",
+      text: "The instructor is incredibly approachable and create a fun and engaging environment, even when tackling complex concepts. Their structured curriculum ensures a clear learning path.",
+      role: "JLPT Graduate"
+    },
+    {
+      name: "Suchismita Mridha",
+      rating: 5,
+      text: "My experience with Yume Japanese Language School was quite well and I've learned a lot from the teacher. Equal attention was given to every individual which is the best part of YJLS.",
       role: "Former Student"
-    },
-    {
-      name: "Ayesha Sengupta",
-      rating: 5,
-      text: "Yume's modern materials and friendly faculty made learning enjoyable and effective. Highly recommended!",
-      role: "JLPT N5 Achiever"
     }
   ];
 
-  // NEW SECTIONS DATA
   const courses = [
     {
       title: "Beginner Course (N5)",
@@ -77,10 +76,26 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Students Taught", description: "Happy learners across all levels" },
-    { number: "95%", label: "Pass Rate", description: "Success in JLPT & NAT exams" },
-    { number: "50+", label: "Visa Success", description: "Students now studying/working in Japan" },
-    { number: "5+", label: "Years Experience", description: "Trusted Japanese education in Kolkata" }
+    {
+      number: "500+",
+      label: "Students Taught",
+      description: "Successfully guided students to fluency",
+    },
+    {
+      number: "95%",
+      label: "JLPT Success Rate", 
+      description: "High pass rates in proficiency tests",
+    },
+    {
+      number: "8+",
+      label: "Years Experience",
+      description: "Proven track record in language education",
+    },
+    {
+      number: "50+", 
+      label: "Students in Japan",
+      description: "Successfully studying and working in Japan",
+    }
   ];
 
   const upcomingEvents = [
@@ -101,7 +116,7 @@ const Home = () => {
     {
       date: "30",
       month: "Sep",
-      title: "Japan Study Visa Seminar",
+      title: "MEXT Scholarship Guidance Seminar",
       time: "3:00 PM - 5:00 PM",
       type: "Seminar"
     }
@@ -165,36 +180,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-              Why Choose Yume?
-            </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Experience the difference with our proven teaching methods and dedicated support
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-4 sm:p-6">
-                  <div className="text-primary mb-3 sm:mb-4 flex justify-center">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-md sm:text-xl font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* NEW: Popular Courses Preview */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
+      <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
@@ -246,38 +233,42 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section - What we provide */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6 text-center lg:text-left">
-                Career & Visa Support
+                Comprehensive Support & Guidance
               </h2>
               <div className="space-y-3 sm:space-y-4 text-foreground">
                 <p className="text-base sm:text-lg leading-relaxed text-center lg:text-left">
-                  We don't just teach Japanese - we open doors to your future! Our comprehensive support includes:
+                  We don't just teach Japanese - we guide you toward your dreams! Our comprehensive support includes:
                 </p>
                 <ul className="space-y-2 sm:space-y-3 max-w-lg ml-2 sm:ml-0 sm:mx-0">
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm sm:text-base">Student and Job Visa guidance</span>
+                    <GraduationCap className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
+                    <span className="text-sm sm:text-base"><strong>JLPT & NAT Preparation</strong> & free mock tests</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm sm:text-base">TITP visa program assistance</span>
+                    <FileText className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
+                    <span className="text-sm sm:text-base"><strong>MEXT Scholarship Guidance</strong> & application support</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm sm:text-base">Global institution applications</span>
+                    <School className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
+                    <span className="text-sm sm:text-base"><strong>Study in Japan Consultation</strong> & university guidance</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm sm:text-base">Job placement assistance</span>
+                    <Globe className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
+                    <span className="text-sm sm:text-base"><strong>Japanese Culture & Lifestyle</strong> training</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm sm:text-base">Personalized coaching for opportunities</span>
+                    <Target className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
+                    <span className="text-sm sm:text-base"><strong>Interview Preparation</strong> & job guidance</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Gift className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
+                    <span className="text-sm sm:text-base"><strong>Free Study Materials</strong> & WhatsApp groups</span>
                   </li>
                 </ul>
               </div>
@@ -347,6 +338,34 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+      {/* Why Choose Us Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+              Why Choose Yume?
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+              Experience the difference with our proven teaching methods and dedicated support
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="text-primary mb-3 sm:mb-4 flex justify-center">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-md sm:text-xl font-semibold mb-2">{benefit.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-background">
@@ -400,10 +419,14 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-md sm:max-w-none mx-auto">
             <Button variant="secondary" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 flex items-center justify-center">
-              <Heart className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-              <a href="/contact">Start Learning Today</a>
+              <a href="/contact" className="flex items-center gap-2">
+                <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                Start Your Application
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 border-white hover:bg-white text-gray-800 hover:text-gray-700">
+              <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
               <a href="/gallery">View Our Gallery</a>
             </Button>
           </div>

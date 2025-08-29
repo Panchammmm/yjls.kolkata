@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import { ArrowRight, GraduationCap, PhoneOutgoing, Sparkles, X } from "lucide-react";
 import heroClassroom from "@/assets/hero-classroom.jpg";
 import learningMaterials from "@/assets/learning-materials.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
@@ -177,35 +177,37 @@ const Gallery = () => {
       )}
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-hero text-primary-foreground">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-hero text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-            Experience Yume Yourself
+          <div className="flex justify-center mb-6">
+            <div className="p-4 bg-white/10 rounded-lg">
+              <Sparkles className="h-6 w-6 text-secondary" />
+            </div>
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
+            Ready to Begin Your Journey with YJLS?
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 opacity-90 leading-relaxed max-w-2xl mx-auto">
-            <span className="hidden sm:inline">
-              Visit our campus for a tour and see our facilities, meet our teachers, and experience the Yume difference firsthand.
-            </span>
-            <span className="sm:hidden">
-              Visit our campus and experience the Yume difference firsthand.
-            </span>
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 leading-relaxed">
+            Join hundreds of successful students who have achieved their Japanese language goals with us. Your success story starts here!
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button 
-              variant="secondary" 
-              size="lg" 
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
-            >
-              <span className="hidden sm:inline">Schedule Campus Visit</span>
-              <span className="sm:hidden">Campus Visit</span>
+            <Button variant="secondary" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto group">
+              <a href="/contact" className="flex items-center gap-2">
+                <GraduationCap className="h-4 w-4 mr-2" />
+                Start Your Application
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto"
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-base sm:text-lg px-6 sm:px-8 py-3 border-white text-gray-900 hover:bg-white hover:text-gray-700 w-full sm:w-auto group"
             >
-              <span className="hidden sm:inline">Book Demo Class</span>
-              <span className="sm:hidden">Demo Class</span>
+              <a href="tel:+918670035037" className="flex items-center gap-2">
+                <PhoneOutgoing className="h-4 w-4 mr-2" />
+                Book a Demo Class
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform sm:hidden" />
+              </a>
             </Button>
           </div>
         </div>
