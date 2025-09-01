@@ -26,30 +26,26 @@ import studentsLearning from "@/assets/students-learning.jpg";
 import { Tabs, TabsTrigger, TabsList, TabsContent } from "@/components/ui/tabs";
 
 const About = () => {
-  const achievements = [
+  const stats = [
     {
-      number: "500+",
+      number: "160+",
       label: "Students Taught",
       description: "Successfully guided students to fluency",
-      icon: <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8" />
     },
     {
       number: "95%",
       label: "JLPT Success Rate", 
       description: "High pass rates in proficiency tests",
-      icon: <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8" />
     },
     {
-      number: "8+",
+      number: "3+",
       label: "Years Experience",
       description: "Proven track record in language education",
-      icon: <Calendar className="h-6 w-6 sm:h-8 sm:w-8" />
     },
     {
       number: "50+", 
-      label: "Job Placements",
-      description: "Students working in Japan",
-      icon: <Briefcase className="h-6 w-6 sm:h-8 sm:w-8" />
+      label: "Students in Japan",
+      description: "Successfully studying and working in Japan",
     }
   ];
 
@@ -205,78 +201,26 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision as Journey Timeline */}
-      {/* <section className="py-16 bg-background">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="relative">
-            
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"></div>
-            <div className="space-y-16">
-              <div className="flex items-center justify-start">
-                <div className="w-1/2 pr-8 text-right">
-                  <div className="flex items-center justify-end gap-4 mb-4">
-                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <Target className="size-6 text-primary" />
-                    </div>
-                    <h2 className="text-xl sm:text-2xl font-bold text-foreground">Our Mission</h2>
-                  </div>
-                  <p className="text-muted-foreground">
-                    To provide exceptional Japanese language education that empowers students to achieve their personal and professional goals. We believe in making Japanese learning accessible, enjoyable, and effective for everyone, regardless of their background or starting level.
-                  </p>
-                </div>
-                <div className="w-4 h-4 bg-primary rounded-full z-10"></div>
-                <div className="w-1/2"></div>
-              </div>
-
-              <div className="flex items-center justify-end">
-                <div className="w-1/2"></div>
-                <div className="w-4 h-4 bg-primary rounded-full z-10"></div>
-                <div className="w-1/2 pl-8 text-left">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <Globe className="size-6 text-primary" />
-                    </div>
-                    <h2 className="text-xl sm:text-2xl font-bold text-foreground">Our Vision</h2>
-                  </div>
-                  <p className="text-muted-foreground">
-                    To be the leading bridge between India and Japan, fostering cultural understanding and creating global opportunities. We envision a future where language barriers don't limit dreams, and every student can confidently pursue their aspirations in Japan.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Achievements */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <div className="flex justify-center mb-4">
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-              Our Achievements
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
+              Our Success Story
             </h2>
-            <p className="text-lg sm:text-xl opacity-90">
-              Numbers that speak for our commitment to excellence
+            <p className="text-lg sm:text-xl opacity-90 max-w-2xl mx-auto px-4">
+              Numbers that speak for our excellence and dedication
             </p>
           </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="text-center group">
-                <div className="flex justify-center mb-3">
-                  <div className="p-3 bg-white/10 rounded-lg group-hover:bg-white/20 transition-colors">
-                    <div className="text-secondary">
-                      {achievement.icon}
-                    </div>
-                  </div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary mb-2">
+                  {stat.number}
                 </div>
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-1 sm:mb-2">
-                  {achievement.number}
-                </div>
-                <div className="text-sm sm:text-lg lg:text-xl font-semibold mb-1 sm:mb-2">{achievement.label}</div>
-                <div className="text-xs sm:text-sm opacity-90 px-1">{achievement.description}</div>
+                <h3 className="text-md sm:text-xl font-semibold mb-1 sm:mb-2">{stat.label}</h3>
+                <p className="text-sm sm:text-base opacity-90 leading-relaxed hidden sm:inline">{stat.description}</p>
               </div>
             ))}
           </div>

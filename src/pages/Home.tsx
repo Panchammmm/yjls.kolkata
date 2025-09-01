@@ -53,23 +53,23 @@ const Home = () => {
 
   const courses = [
     {
-      title: "Beginner Course (N5)",
-      duration: "3 months",
-      price: "₹8,000",
+      title: "Beginner Course (N5 Level)",
+      duration: "6 months",
+      price: "₹1,000/month",
       features: ["Hiragana & Katakana", "Basic Grammar", "Cultural Introduction"],
       popular: true
     },
     {
-      title: "JLPT Preparation",
-      duration: "2-3 months",
-      price: "₹10,000",
+      title: "NAT Test Preparation",
+      duration: "3 months",
+      price: "₹2,000/month",
       features: ["Mock Tests", "Strategy Training", "Quick Results"],
       popular: false
     },
     {
       title: "Conversational Japanese",
-      duration: "Ongoing",
-      price: "₹6,000/month",
+      duration: "3 months",
+      price: "₹1,200/month",
       features: ["Native Speakers", "Real Scenarios", "Pronunciation"],
       popular: false
     }
@@ -77,7 +77,7 @@ const Home = () => {
 
   const stats = [
     {
-      number: "500+",
+      number: "160+",
       label: "Students Taught",
       description: "Successfully guided students to fluency",
     },
@@ -87,7 +87,7 @@ const Home = () => {
       description: "High pass rates in proficiency tests",
     },
     {
-      number: "8+",
+      number: "3+",
       label: "Years Experience",
       description: "Proven track record in language education",
     },
@@ -218,7 +218,7 @@ const Home = () => {
                     ))}
                   </ul>
                   <Button className="w-full" size="sm">
-                    Learn More
+                    <a href="/courses">Learn More</a>
                   </Button>
                 </CardContent>
               </Card>

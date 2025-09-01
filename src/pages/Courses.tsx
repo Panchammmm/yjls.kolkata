@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, BookOpen, Award, CheckCircle, PhoneOutgoing, School } from "lucide-react";
+import { Clock, Users, BookOpen, Award, CheckCircle, PhoneOutgoing, School, BookMarked } from "lucide-react";
 import jlptPreparation from "@/assets/jlpt-preparation.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
 
@@ -11,6 +11,7 @@ const Courses = () => {
       title: "Beginner Course (N5 Level)",
       duration: "6 months",
       students: "6 per batch",
+      classes: "2 classes/week",
       description: "Perfect for absolute beginners. Learn Hiragana, Katakana, basic grammar and vocabulary.",
       features: [
         "Hiragana & Katakana mastery",
@@ -29,6 +30,7 @@ const Courses = () => {
       title: "Basic Course (N4 Level)",
       duration: "6-8 months",
       students: "5 per batch",
+      classes: "2 classes/week",
       description: "Build on your foundation with intermediate grammar, expanded vocabulary, and practical communication.",
       features: [
         "Extended vocabulary (1,000+ words)",
@@ -46,6 +48,7 @@ const Courses = () => {
       title: "JLPT Preparation",
       duration: "2-3 months",
       students: "8 per batch",
+      classes: "3 classes/week",
       description: "Intensive preparation for JLPT N5, N4, and N3 levels with mock tests and strategies.",
       features: [
         "Comprehensive test strategies",
@@ -54,13 +57,14 @@ const Courses = () => {
         "Weak area identification",
         "Confidence building"
       ],
-      price: "₹1,500/month",
+      price: "₹2,000/month",
       badge: "Exam Focus"
     },
     {
       title: "NAT Test Preparation",
-      duration: "2 months",
+      duration: "3 months",
       students: "5-6 per batch",
+      classes: "3 classes/week",
       description: "Specialized coaching for NAT (Nihongo Ability Test) with focused practice sessions.",
       features: [
         "NAT-specific curriculum",
@@ -69,13 +73,14 @@ const Courses = () => {
         "Individual attention",
         "Quick result strategies"
       ],
-      price: "₹2,000",
+      price: "₹2,000/month",
       badge: "Fast Track"
     },
     {
       title: "Conversational Japanese",
-      duration: "Ongoing",
+      duration: "3 months",
       students: "6-8 per batch",
+      classes: "1 class/week",
       description: "Focus on speaking and listening skills for real-world communication and cultural exchange.",
       features: [
         "Native speaker sessions",
@@ -109,27 +114,68 @@ const Courses = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-            Our Japanese Language Courses
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-            <span className="hidden md:inline">
-              From beginner to advanced levels, we offer comprehensive courses designed to help you achieve fluency in Japanese with our interactive and effective teaching methods.
-            </span>
-            <span className="md:hidden">
-              Comprehensive Japanese courses from beginner to advanced levels with interactive teaching methods.
-            </span>
-          </p>
-          <div className="flex justify-center">
-            <img 
-              src={jlptPreparation} 
-              alt="JLPT Preparation"
-              className="rounded-lg shadow-elegant max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl w-full h-auto"
-              loading="lazy"
-            />
+      {/* Enhanced Full-Screen Hero Section */}
+      <section className="relative flex items-center justify-center bg-gradient-accent overflow-hidden">
+
+        {/* Animated floating particles */}
+        {/* <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-2 h-2 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+          <div className="absolute top-40 right-32 w-3 h-3 bg-secondary/20 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-32 left-40 w-2 h-2 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-60 right-20 w-3 h-3 bg-secondary/20 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute top-60 left-1/2 w-2 h-2 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
+        </div> */}
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36">
+          <div className="text-center">
+            {/* Badge/Announcement */}
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 sm:mb-8 animate-fade-in">
+              <Award className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Trusted by 500+ Students</span>
+            </div>
+
+            {/* Main Heading with enhanced animation */}
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 sm:mb-8 leading-tight animate-slide-up">
+              Master Japanese
+              <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-gradient">
+                From Zero to Fluency
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground max-w-5xl mx-auto mb-10 sm:mb-16 leading-relaxed font-light animate-fade-in-delay">
+              <span className="hidden md:inline">
+                Join our structured Japanese language courses designed for Indian learners.
+                From Hiragana to JLPT success, we'll guide you every step of the way.
+              </span>
+              <span className="md:hidden">
+                Structured Japanese courses designed for Indian learners. From basics to JLPT success.
+              </span>
+            </p>
+
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto px-5 sm:px-0">
+              <Button
+                variant="hero"
+                size="lg"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-1 bg-gradient-to-r from-primary to-secondary border-0"
+              >
+                <a href="tel:+918670035037" className="flex items-center gap-2">
+                  <PhoneOutgoing className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                  Book a Demo Class
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-1 border-0"
+              >
+                <a href="/about" className="flex items-center gap-2">
+                  <School className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                  Know Our School
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -142,8 +188,8 @@ const Courses = () => {
               Choose Your Perfect Course
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto">
-              <span className="hidden sm:inline">Structured programs for Japanese level and goal</span>
-              <span className="sm:hidden">Programs for Japanese level</span>
+              <span className="hidden sm:inline">Structured programs for every Japanese level and goal</span>
+              <span className="sm:hidden">Programs for every Japanese level</span>
             </p>
           </div>
 
@@ -162,7 +208,11 @@ const Courses = () => {
                   <CardTitle className="text-lg sm:text-xl md:text-xl text-foreground leading-tight min-h-[3rem] sm:min-h-[3.5rem] flex items-start">
                     {course.title}
                   </CardTitle>
-                  <div className="flex flex-col xs:flex-row xs:items-center xs:space-x-4 space-y-2 xs:space-y-0 text-xs sm:text-sm text-muted-foreground">
+                  <div className="flex flex-col xs:flex-row xs:items-center xs:space-x-4 space-y-2 xs:space-y-0 text-sm sm:text-[14.5px] text-muted-foreground">
+                    <div className="flex items-center space-x-1">
+                      <BookMarked className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                      <span className="truncate">{course.classes}</span>
+                    </div>
                     <div className="flex items-center space-x-1">
                       <Clock className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
                       <span>{course.duration}</span>
@@ -182,7 +232,7 @@ const Courses = () => {
                     <h4 className="font-semibold text-sm sm:text-base text-foreground">Course Features:</h4>
                     <ul className="space-y-1 sm:space-y-2">
                       {course.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start space-x-2 text-xs sm:text-sm text-muted-foreground">
+                        <li key={idx} className="flex items-start space-x-2 text-sm sm:text-[14.5px] text-muted-foreground">
                           <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-primary flex-shrink-0 mt-0.5" />
                           <span className="leading-relaxed">{feature}</span>
                         </li>
@@ -211,7 +261,7 @@ const Courses = () => {
       </section>
 
       {/* Teaching Methods */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-primary text-primary-foreground">
+      <section className="py-14 pb-20 sm:py-16 md:py-20 lg:py-24 bg-gradient-accent text-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
@@ -241,53 +291,6 @@ const Courses = () => {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-background">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="mb-6 sm:mb-8">
-            <img 
-              src={studentsLearning} 
-              alt="Students Learning"
-              className="rounded-lg shadow-soft mx-auto max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl w-full h-auto"
-              loading="lazy"
-            />
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-            Ready to Start Your Learning Journey?
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
-            <span className="hidden sm:inline">
-              Contact us today for a free consultation and find the perfect course for your goals
-            </span>
-            <span className="sm:hidden">
-              Contact us for a free consultation and find your perfect course
-            </span>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto px-5 sm:px-0">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
-            >
-              <a href="tel:+918670035037" className="flex items-center gap-2">
-                <PhoneOutgoing className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                Book a Demo Class
-              </a>
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
-            >
-              <a href="/about" className="flex items-center gap-2">
-                <School className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                Know Our School
-              </a>
-            </Button>
           </div>
         </div>
       </section>
