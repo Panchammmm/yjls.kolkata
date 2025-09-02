@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, BookOpen, Award, CheckCircle, PhoneOutgoing, School, BookMarked } from "lucide-react";
+import { Clock, Users, BookOpen, Award, CheckCircle, PhoneOutgoing, School, BookMarked, ChevronDown } from "lucide-react";
 import jlptPreparation from "@/assets/jlpt-preparation.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
 
@@ -112,6 +112,29 @@ const Courses = () => {
     }
   ];
 
+  const faqs = [
+    {
+      question: "How long does it take to learn Japanese?",
+      answer: "For basic conversation: 6-12 months. For JLPT N5: 6 months. For JLPT N4: upto 12 months. It depends on your dedication and study intensity."
+    },
+    {
+      question: "Can complete beginners join your courses?",
+      answer: "Yes! Our beginner course (N5) is designed for students with zero Japanese knowledge. We start from Hiragana and Katakana basics."
+    },
+    {
+      question: "What are your course fees?",
+      answer: "Beginner (N5): ₹1,000/month, Intermediate (N4): ₹1,500/month, JLPT/NAT Prep: ₹2,000/month, Conversational: ₹1,200/month. All materials included."
+    },
+    {
+      question: "Do you help with studying or job in Japan?",
+      answer: "Yes! We provide MEXT & other popular scholarship guidance, university application support, resume guidance and interview preparation. Many students are well satisfied with our services."
+    },
+    {
+      question: "What is your JLPT success rate?",
+      answer: "We maintain a 95% success rate in JLPT exams. Our courses include mock tests, exam strategies, and comprehensive preparation for N5, N4, and Intermediate levels."
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Enhanced Full-Screen Hero Section */}
@@ -131,7 +154,7 @@ const Courses = () => {
             {/* Badge/Announcement */}
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 sm:mb-8 animate-fade-in">
               <Award className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Trusted by 500+ Students</span>
+              <span className="text-sm font-medium text-primary">Trusted by 160+ Students</span>
             </div>
 
             {/* Main Heading with enhanced animation */}
@@ -204,7 +227,7 @@ const Courses = () => {
                     {course.badge}
                   </Badge>
                 )}
-                <CardHeader className="pb-3 sm:pb-4">
+                <CardHeader className="pb-3 sm:pb-4 mt-2">
                   <CardTitle className="text-lg sm:text-xl md:text-xl text-foreground leading-tight min-h-[3rem] sm:min-h-[3.5rem] flex items-start">
                     {course.title}
                   </CardTitle>
@@ -291,6 +314,48 @@ const Courses = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+        <div className="max-w-full sm:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-2 sm:px-0">
+              Everything you need to know about our Japanese language courses
+            </p>
+          </div>
+
+          <div className="space-y-3 sm:space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index} className="hover:shadow-md transition-all duration-300">
+                <CardContent className="p-0">
+                  <details className="group">
+                    <summary className="flex justify-between items-center p-4 sm:p-6 cursor-pointer list-none">
+                      <span className="font-semibold text-base sm:text-lg text-foreground pr-4">
+                        {faq.question}
+                      </span>
+                      <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground group-open:rotate-180 transition-transform duration-300 flex-shrink-0" />
+                    </summary>
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </details>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-8 sm:mt-12">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+              <a href="/contact">Still Have Questions?</a>
+            </Button>
           </div>
         </div>
       </section>
