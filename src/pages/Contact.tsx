@@ -305,7 +305,7 @@ Timestamp: ${new Date().toLocaleString()}
                             <SelectItem value="beginner">Beginner Course (N5)</SelectItem>
                             <SelectItem value="basic">Basic Course (N4)</SelectItem>
                             <SelectItem value="intermediate">Intermediate Course (N3)</SelectItem>
-                            <SelectItem value="advanced">Advanced Course (N2/N1)</SelectItem>
+                            <SelectItem value="study">Study in Japan Consultation</SelectItem>
                             <SelectItem value="jlpt">JLPT Preparation</SelectItem>
                             <SelectItem value="nat">NAT Test Preparation</SelectItem>
                             <SelectItem value="conversation">Conversational Japanese</SelectItem>
@@ -451,7 +451,7 @@ Timestamp: ${new Date().toLocaleString()}
                     type="submit" 
                     variant="hero" 
                     size="lg" 
-                    className="w-full h-11 sm:h-12 group text-sm sm:text-base"
+                    className="w-full h-11 sm:h-12 group text-sm sm:text-base transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-1 border-0"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

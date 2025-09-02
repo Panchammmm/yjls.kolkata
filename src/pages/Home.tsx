@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Users, BookOpen, Award, Globe, Heart, Clock, CheckCircle, School, Play, Calendar, MapPin, Phone, Mail, GraduationCap, FileText, MessageCircle, Target, Headphones, Gift, Sparkle, Sparkles, ArrowRight } from "lucide-react";
+import { Star, Users, BookOpen, Award, Globe, Heart, Clock, CheckCircle, School, GraduationCap, FileText, Target, Gift, Sparkles, ArrowRight, ChevronDown } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import heroImage from "@/assets/hero-classroom.jpg";
 import learningMaterials from "@/assets/learning-materials.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
@@ -35,19 +42,43 @@ const Home = () => {
       name: "Anirban Mondal",
       rating: 5,
       text: "I'm currently studying Japanese at Yume Japanese Language School and the experience has been fantastic. The teachers are excellent—knowledgeable, patient, and make learning enjoyable.",
-      role: "Current Student"
+      role: "Current Student",
     },
     {
       name: "Rohit Sarkar",
       rating: 5,
       text: "The instructor is incredibly approachable and create a fun and engaging environment, even when tackling complex concepts. Their structured curriculum ensures a clear learning path.",
-      role: "JLPT Graduate"
+      role: "JLPT Graduate",
     },
     {
       name: "Suchismita Mridha",
       rating: 5,
       text: "My experience with Yume Japanese Language School was quite well and I've learned a lot from the teacher. Equal attention was given to every individual which is the best part of YJLS.",
-      role: "Former Student"
+      role: "Former Student",
+    },
+    {
+      name: "Ritwayan Mondal",
+      rating: 5,
+      text: "'Yume' means Dream in Japan. If you dream it you can achieve it. Jyoti Sir is so polite and humble, I advise if you check it, just one call to sir, he definitely give you real advice. By the way it's your decision to join the class...",
+      role: "JLPT N5 Graduate",
+    },
+    {
+      name: "Sayandeep Biswas",
+      rating: 5,
+      text: "One of the best places you can learn japanese in West Bengal. Gayen sensei, our teacher, is also extremely open about him and knows how to make his students open up to him and get the best out of every individual.",
+      role: "Current N4 Student",
+    },
+    {
+      name: "Rahul Roy",
+      rating: 5,
+      text: "If you want to learn Japanese, this is the best place to follow a guided learning path. The structured approach and expert guidance make it an excellent choice for all levels.",
+      role: "Current N4 Student",
+    },
+    {
+      name: "Mousumi Kumar",
+      rating: 5,
+      text: "This is an excellent place to learn Japanese. In my case, my teacher is Jyotirmoy Gayen sensei, he is very friendly and interactive. I recommend this institution.",
+      role: "Current N5 Student",
     }
   ];
 
@@ -79,7 +110,7 @@ const Home = () => {
     {
       number: "160+",
       label: "Students Taught",
-      description: "Successfully guided students to fluency",
+      description: "From beginners to confident Japanese speakers",
     },
     {
       number: "95%",
@@ -92,9 +123,9 @@ const Home = () => {
       description: "Proven track record in language education",
     },
     {
-      number: "50+", 
-      label: "Students in Japan",
-      description: "Successfully studying and working in Japan",
+      number: "100+", 
+      label: "All Star Ratings",
+      description: "Exceptional ratings across all platforms",
     }
   ];
 
@@ -119,6 +150,29 @@ const Home = () => {
       title: "MEXT Scholarship Guidance Seminar",
       time: "3:00 PM - 5:00 PM",
       type: "Seminar"
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "How long does it take to learn Japanese?",
+      answer: "For basic conversation: 6-12 months. For JLPT N5: 6 months. For JLPT N4: upto 12 months. It depends on your dedication and study intensity."
+    },
+    {
+      question: "Can complete beginners join your courses?",
+      answer: "Yes! Our beginner course (N5) is designed for students with zero Japanese knowledge. We start from Hiragana and Katakana basics."
+    },
+    {
+      question: "What are your course fees?",
+      answer: "Beginner (N5): ₹1,000/month, Intermediate (N4): ₹1,500/month, JLPT/NAT Prep: ₹2,000/month, Conversational: ₹1,200/month. All materials included."
+    },
+    {
+      question: "Do you help with studying or job in Japan?",
+      answer: "Yes! We provide MEXT & other popular scholarship guidance, university application support, resume guidance and interview preparation. Many students are well satisfied with our services."
+    },
+    {
+      question: "What is your JLPT success rate?",
+      answer: "We maintain a 95% success rate in JLPT exams. Our courses include mock tests, exam strategies, and comprehensive preparation for N5, N4, and Intermediate levels."
     }
   ];
 
@@ -338,7 +392,79 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
+      {/* Testimonials Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-primary text-primary-foreground">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
+              Student Success Stories
+            </h2>
+            <p className="text-lg sm:text-xl px-4">
+              Real achievements from our Japanese language learners
+            </p>
+          </div>
+
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto px-2 sm:px-4"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem
+                  key={index}
+                  className="basis-[90%] sm:basis-1/2 lg:basis-1/3"
+                >
+                  <Card className="h-full hover:shadow-lg transition-all duration-300">
+                    <CardContent className="p-4 sm:p-6 flex flex-col h-full">
+                      <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                        <img
+                          src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
+                            testimonial.name
+                          )}`}
+                          alt={testimonial.name}
+                          className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-primary"
+                        />
+                        <div>
+                          <p className="font-semibold text-sm sm:text-base">
+                            {testimonial.name}
+                          </p>
+                          <p className="text-xs sm:text-sm text-muted-foreground">
+                            {testimonial.role}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex mb-3 sm:mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current"
+                          />
+                        ))}
+                      </div>
+                      <p className="italic flex-grow text-sm sm:text-base">
+                        "{testimonial.text}"
+                      </p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex text-gray-950 bg-gray-50" />
+            <CarouselNext className="hidden sm:flex text-gray-950 bg-gray-50" />
+          </Carousel>
+
+          <div className="text-center mt-8 sm:mt-12 px-4">
+            <Button asChild variant="outline" className="w-full sm:w-auto text-gray-950 bg-gray-100">
+              <a href="/testimonials">View All Testimonials & Videos</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -350,7 +476,7 @@ const Home = () => {
               Experience the difference with our proven teaching methods and dedicated support
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {benefits.map((benefit, index) => (
               <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
@@ -367,42 +493,43 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* FAQ Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full sm:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-              What Our Students Say
+              Frequently Asked Questions
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground px-4">
-              Join thousands of satisfied students who achieved their Japanese language goals
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-2 sm:px-0">
+              Everything you need to know about our Japanese language courses
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover:shadow-elegant transition-all duration-300 h-full mx-2 sm:mx-0">
-                <CardContent className="p-4 sm:p-6 flex flex-col h-full">
-                  <div className="flex mb-3 sm:mb-4 justify-center sm:justify-start">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-sm sm:text-base text-foreground mb-3 sm:mb-4 italic flex-grow text-center sm:text-left leading-relaxed">
-                    "{testimonial.text}"
-                  </p>
-                  <div className="text-center sm:text-left">
-                    <p className="font-semibold text-foreground text-sm sm:text-base">{testimonial.name}</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
+
+          <div className="space-y-3 sm:space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index} className="hover:shadow-md transition-all duration-300">
+                <CardContent className="p-0">
+                  <details className="group">
+                    <summary className="flex justify-between items-center p-4 sm:p-6 cursor-pointer list-none">
+                      <span className="font-semibold text-base sm:text-lg text-foreground pr-4">
+                        {faq.question}
+                      </span>
+                      <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground group-open:rotate-180 transition-transform duration-300 flex-shrink-0" />
+                    </summary>
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </details>
                 </CardContent>
               </Card>
             ))}
           </div>
-          
-          <div className="text-center mt-6 sm:mt-8 px-4">
-            <Button asChild variant="outline" className="w-full sm:w-auto">
-              <a href="/testimonials">View All Testimonials & Videos</a>
+
+          <div className="text-center mt-8 sm:mt-12">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+              <a href="/contact">Still Have Questions?</a>
             </Button>
           </div>
         </div>

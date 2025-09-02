@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import SiteLogo from "@/assets/site-logo.png";
 
 const Footer = () => {
   return (
@@ -9,8 +10,8 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="bg-secondary text-secondary-foreground px-3 py-1 rounded font-bold text-lg">
-                夢
+              <div className="bg-gradient-primary text-primary-foreground rounded-full p-[3px]">
+                <img src={SiteLogo} alt="YJLS Logo" className="size-8" />
               </div>
               <div className="font-bold text-lg">YJLS</div>
             </div>
@@ -57,9 +58,9 @@ const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80 text-sm">
               <li>JLPT Preparation</li>
               <li>NAT Test Coaching</li>
-              <li>Visa Assistance</li>
-              <li>Job Placement</li>
-              <li>Cultural Training</li>
+              <li>MEXT Scholarship Guidance</li>
+              <li>Job & Interview Guidance</li>
+              <li>Study in Japan Consultation</li>
             </ul>
           </div>
 

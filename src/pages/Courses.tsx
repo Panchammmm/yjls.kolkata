@@ -118,13 +118,13 @@ const Courses = () => {
       <section className="relative flex items-center justify-center bg-gradient-accent overflow-hidden">
 
         {/* Animated floating particles */}
-        {/* <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-20 w-2 h-2 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
           <div className="absolute top-40 right-32 w-3 h-3 bg-secondary/20 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
           <div className="absolute bottom-32 left-40 w-2 h-2 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
           <div className="absolute bottom-60 right-20 w-3 h-3 bg-secondary/20 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
           <div className="absolute top-60 left-1/2 w-2 h-2 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
-        </div> */}
+        </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36">
           <div className="text-center">
