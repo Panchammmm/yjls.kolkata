@@ -15,26 +15,26 @@ import japaneseCulture from "@/assets/japanese-culture.jpg";
 
 const Home = () => {
   const benefits = [
-    {
-      icon: <Users className="h-6 w-6 sm:h-8 sm:w-8" />,
-      title: "Expert Faculty",
-      description: "Learn from experienced certified instructors with proven teaching expertise"
-    },
-    {
-      icon: <BookOpen className="h-6 w-6 sm:h-8 sm:w-8" />,
-      title: "Modern Materials",
-      description: "Interactive learning with latest textbooks and digital resources"
-    },
-    {
-      icon: <Award className="h-6 w-6 sm:h-8 sm:w-8" />,
-      title: "Proven Track Record",
-      description: "High success rate in JLPT and NAT proficiency tests"
-    },
-    {
-      icon: <Globe className="h-6 w-6 sm:h-8 sm:w-8" />,
-      title: "Global Opportunities",
-      description: "Comprehensive guidance for studying and working in Japan"
-    }
+  {
+    icon: <Users className="h-6 w-6 sm:h-8 sm:w-8" />,
+    title: "Expert Faculty",
+    description: "Certified, experienced instructors who make learning engaging and effective."
+  },
+  {
+    icon: <BookOpen className="h-6 w-6 sm:h-8 sm:w-8" />,
+    title: "Up-to-date Materials",
+    description: "Interactive lessons with the latest textbooks and online tools."
+  },
+  {
+    icon: <Award className="h-6 w-6 sm:h-8 sm:w-8" />,
+    title: "Proven Results",
+    description: "Consistently high pass rates in JLPT, NAT, and student satisfaction."
+  },
+  {
+    icon: <Globe className="h-6 w-6 sm:h-8 sm:w-8" />,
+    title: "Global Pathways",
+    description: "Guidance for higher studies, careers, and life in Japan and beyond."
+  }
   ];
 
   const testimonials = [
@@ -115,7 +115,7 @@ const Home = () => {
     {
       number: "95%",
       label: "JLPT Success Rate", 
-      description: "High pass rates in proficiency tests",
+      description: "Exceptional success rates in japanese proficiency tests",
     },
     {
       number: "3+",
@@ -125,33 +125,33 @@ const Home = () => {
     {
       number: "100+", 
       label: "All Star Ratings",
-      description: "Exceptional ratings across all platforms",
+      description: "Exceptional ratings across all platforms globally",
     }
   ];
 
-  const upcomingEvents = [
-    {
-      date: "15",
-      month: "Sep",
-      title: "Free Japanese Cultural Workshop",
-      time: "2:00 PM - 4:00 PM",
-      type: "Workshop"
-    },
-    {
-      date: "22",
-      month: "Sep",
-      title: "JLPT N5 Mock Test",
-      time: "10:00 AM - 12:00 PM",
-      type: "Test"
-    },
-    {
-      date: "30",
-      month: "Sep",
-      title: "MEXT Scholarship Guidance Seminar",
-      time: "3:00 PM - 5:00 PM",
-      type: "Seminar"
-    }
-  ];
+  // const upcomingEvents = [
+  //   {
+  //     date: "15",
+  //     month: "Sep",
+  //     title: "Free Japanese Cultural Workshop",
+  //     time: "2:00 PM - 4:00 PM",
+  //     type: "Workshop"
+  //   },
+  //   {
+  //     date: "22",
+  //     month: "Sep",
+  //     title: "JLPT N5 Mock Test",
+  //     time: "10:00 AM - 12:00 PM",
+  //     type: "Test"
+  //   },
+  //   {
+  //     date: "30",
+  //     month: "Sep",
+  //     title: "MEXT Scholarship Guidance Seminar",
+  //     time: "3:00 PM - 5:00 PM",
+  //     type: "Seminar"
+  //   }
+  // ];
 
   const faqs = [
     {
@@ -344,7 +344,7 @@ const Home = () => {
       </section>
 
       {/* NEW: Upcoming Events */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+      {/* <section className="py-12 sm:py-16 lg:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
@@ -389,6 +389,34 @@ const Home = () => {
             <Button asChild variant="outline" size="lg">
               <a href="/events">View All Events</a>
             </Button>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Why Choose Us Section */}
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+              Why Choose Yume?
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+              Experience the difference with our proven teaching methods and dedicated support
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="text-primary mb-3 sm:mb-4 flex justify-center">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-md sm:text-xl font-semibold mb-2">{benefit.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -461,34 +489,6 @@ const Home = () => {
             <Button asChild variant="outline" className="w-full sm:w-auto text-gray-950 bg-gray-100">
               <a href="/testimonials">View All Testimonials & Videos</a>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-              Why Choose Yume?
-            </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Experience the difference with our proven teaching methods and dedicated support
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-4 sm:p-6">
-                  <div className="text-primary mb-3 sm:mb-4 flex justify-center">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-md sm:text-xl font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

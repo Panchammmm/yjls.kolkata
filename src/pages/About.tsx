@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   Award, 
-  Users, 
   BookOpen, 
   Globe, 
   Target, 
@@ -11,7 +10,6 @@ import {
   TrendingUp,
   MapPin,
   Star,
-  Building,
   Shield,
   Sparkles,
   ArrowRight,
@@ -19,19 +17,22 @@ import {
 } from "lucide-react";
 import schoolEntrance from "@/assets/school-entrance.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
-import { Tabs, TabsTrigger, TabsList, TabsContent } from "@/components/ui/tabs";
+
+import teampic1 from "@/assets/team/jyotirmoy_gayen.jpg";
+import teampic2 from "@/assets/team/samata_gayen.jpg";
+import teampic3 from "@/assets/team/pancham_sardar.jpg";
 
 const About = () => {
   const stats = [
     {
       number: "160+",
       label: "Students Taught",
-      description: "Successfully guided students to fluency",
+      description: "From beginners to confident Japanese speakers",
     },
     {
       number: "95%",
       label: "JLPT Success Rate", 
-      description: "High pass rates in proficiency tests",
+      description: "Exceptional success rates in japanese proficiency tests",
     },
     {
       number: "3+",
@@ -39,9 +40,9 @@ const About = () => {
       description: "Proven track record in language education",
     },
     {
-      number: "50+", 
-      label: "Students in Japan",
-      description: "Successfully studying and working in Japan",
+      number: "100+", 
+      label: "All Star Ratings",
+      description: "Exceptional ratings across all platforms globally",
     }
   ];
 
@@ -70,55 +71,63 @@ const About = () => {
 
   const team = [
     {
-      name: "Sensei Tanaka",
-      role: "Head Instructor",
-      qualification: "Native Speaker, M.A. in Japanese Linguistics",
-      experience: "10+ years teaching experience",
-      icon: <Star className="h-8 w-8 sm:h-10 sm:w-10" />
+      name: "Jyotirmoy Gayen",
+      role: "Head Instructor & Founder",
+      qualification: "JLPT N2 Certified | Currently Living in Japan",
+      experience: "Over 5 years of passionate teaching experience, committed to helping students master Japanese language and culture with real-world insights.",
+      speciality: "Conversational Japanese & Cultural Integration",
+      img: teampic1,
     },
     {
-      name: "Dr. Priya Chakraborty",
-      role: "Senior Faculty",
-      qualification: "Ph.D. in Japanese Studies, JLPT N1",
-      experience: "8 years in language education",
-      icon: <BookOpen className="h-8 w-8 sm:h-10 sm:w-10" />
+      name: "Samata Gayen",
+      role: "Head of Student Success",
+      qualification: "Japanese Studies Specialist | Education Management Expert",
+      experience: "Brings 3+ years of expertise in education management, focusing on personalized student journeys and program excellence.",
+      speciality: "Student Support & Academic Planning",
+      img: teampic2,
     },
     {
-      name: "Mr. Ravi Kumar",
-      role: "JLPT Specialist",
-      qualification: "JLPT N1, Former Japan Resident",
-      experience: "5 years test preparation expert",
-      icon: <Award className="h-8 w-8 sm:h-10 sm:w-10" />
+      name: "Pancham Sardar",
+      role: "JLPT Preparation Specialist",
+      qualification: "JLPT N4 Certified | Exam Strategy Expert",
+      experience: "Dedicated JLPT instructor with proven techniques for exam success, helping students achieve their certification goals efficiently.",
+      speciality: "Test Preparation & Grammar Mastery",
+      img: teampic3,
     }
   ];
 
   const whyChooseFeatures = [
-    {
-      icon: <TrendingUp className="h-5 w-5 text-primary" />,
-      title: "Proven Track Record",
-      description: "Highest success rates in JLPT and NAT examinations in the region"
-    },
-    {
-      icon: <Shield className="h-5 w-5 text-primary" />,
-      title: "Comprehensive Support",
-      description: "From language learning to visa assistance and job placement"
-    },
-    {
-      icon: <Building className="h-5 w-5 text-primary" />,
-      title: "Modern Facilities",
-      description: "State-of-the-art classrooms with latest learning technology"
-    },
-    {
-      icon: <Sparkles className="h-5 w-5 text-primary" />,
-      title: "Affordable Excellence",
-      description: "Premium education at competitive prices with flexible payment options"
-    },
-    {
-      icon: <MapPin className="h-5 w-5 text-primary" />,
-      title: "Cultural Immersion",
-      description: "Regular cultural events and festivals to deepen understanding"
-    }
-  ];
+  {
+    icon: <TrendingUp className="h-5 w-5 text-primary" />,
+    title: "Proven Track Record",
+    description: "Exceptional success rates in japanese proficiency tests and student satisfaction."
+  },
+  {
+    icon: <Star className="h-5 w-5 text-primary" />,
+    title: "Expert Faculty & Free Resources",
+    description: "Learn from qualified instructors and access high-quality study materials and mock tests at no extra cost."
+  },
+  {
+    icon: <Shield className="h-5 w-5 text-primary" />,
+    title: "Comprehensive Support",
+    description: "JLPT prep, scholarship advice, job coaching, and study-in-Japan assistance."
+  },
+  {
+    icon: <Globe className="h-5 w-5 text-primary" />,
+    title: "Accessible for All",
+    description: "Courses available in Bengali, Hindi, and English for students worldwide."
+  },
+  {
+    icon: <Sparkles className="h-5 w-5 text-primary" />,
+    title: "Affordable Fees",
+    description: "Top-quality programs with flexible payment plans for all learners."
+  },
+  {
+    icon: <MapPin className="h-5 w-5 text-primary" />,
+    title: "Virtual Cultural Experience",
+    description: "Interactive online events and activities to engage with Japanese culture from anywhere."
+  }
+];
 
   return (
     <div className="min-h-screen">
@@ -223,6 +232,67 @@ const About = () => {
         </div>
       </section>
 
+      {/* Team */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="flex justify-center mb-4">
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+              Meet Our Expert Faculty
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground px-4">
+              Learn from experienced teachers who are passionate about Japanese language and culture
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {team.map((member, index) => (
+              <Card key={index} className="hover:shadow-xl transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:-translate-y-2">
+                <CardContent className="p-6 sm:p-8 text-center">
+                  {/* Enhanced Image Container */}
+                  <div className="relative w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      className="w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-lg"
+                    />
+                    {/* Subtle gradient overlay on hover */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+
+                  {/* Enhanced Text Layout */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm text-gray-700 sm:text-base text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full inline-block">
+                      {member.role}
+                    </p>
+                    <div className="space-y-2">
+                      <p className="text-sm sm:text-base text-muted-foreground font-medium">
+                        {member.qualification}
+                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {member.experience}
+                      </p>
+                      {member.speciality && (
+                        <div className="pt-2 border-t border-border/50">
+                          <p className="text-xs sm:text-sm text-primary font-medium">
+                            <Sparkles className="inline h-3 w-3 mr-1" />
+                            {member.speciality}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="py-12 sm:py-16 lg:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -250,40 +320,6 @@ const About = () => {
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">{value.title}</h3>
                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <div className="flex justify-center mb-4">
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-              Meet Our Expert Faculty
-            </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground px-4">
-              Learn from experienced teachers who are passionate about Japanese language and culture
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="hover:shadow-elegant transition-all duration-300 group">
-                <CardContent className="p-4 sm:p-6 text-center">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-primary rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-105 transition-transform">
-                    <div className="text-primary-foreground">
-                      {member.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">{member.name}</h3>
-                  <p className="text-sm sm:text-base text-primary font-medium mb-2">{member.role}</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground mb-1">{member.qualification}</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">{member.experience}</p>
                 </CardContent>
               </Card>
             ))}
