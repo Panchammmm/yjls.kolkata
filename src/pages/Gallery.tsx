@@ -1,56 +1,70 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, PhoneOutgoing, Sparkles, X } from "lucide-react";
-import heroClassroom from "@/assets/hero-classroom.jpg";
-import learningMaterials from "@/assets/learning-materials.jpg";
-import studentsLearning from "@/assets/students-learning.jpg";
-import japaneseCulture from "@/assets/japanese-culture.jpg";
-import schoolEntrance from "@/assets/school-entrance.jpg";
-import jlptPreparation from "@/assets/jlpt-preparation.jpg";
+import { ArrowRight, GraduationCap, PhoneOutgoing, Sparkles, X, Users, BookOpen, Award, Globe } from "lucide-react";
+
+// event photos
+import events1 from "@/assets/Gallery/events/photo1.jpg";
+import events2 from "@/assets/Gallery/events/photo2.jpg";
+import events3 from "@/assets/Gallery/events/photo3.jpg";
+import events4 from "@/assets/Gallery/events/photo4.jpg";
+import events5 from "@/assets/Gallery/events/photo5.jpg";
+import events6 from "@/assets/Gallery/events/photo6.jpg";
+import events7 from "@/assets/Gallery/events/photo7.jpg";
+import events8 from "@/assets/Gallery/events/photo8.jpg";
+
+// classes photos
+import classes1 from "@/assets/Gallery/classes/class1.jpg";
+import classes2 from "@/assets/Gallery/classes/class2.jpg";
+import classes3 from "@/assets/Gallery/classes/class3.jpg";
+import classes4 from "@/assets/Gallery/classes/class4.jpg";
+
+// exams photos
+import exams1 from "@/assets/Gallery/exams/exam1.jpg";
+import exams2 from "@/assets/Gallery/exams/exam2.jpg";
+
+// students photos
+import students1 from "@/assets/Gallery/students/student1.jpg";
+import students2 from "@/assets/Gallery/students/student2.jpg";
+import students3 from "@/assets/Gallery/students/student3.jpg";
+import students4 from "@/assets/Gallery/students/student4.jpg";
+import students5 from "@/assets/Gallery/students/student5.jpg";
+import students6 from "@/assets/Gallery/students/student6.jpg";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const galleryItems = [
-    {
-      id: 1,
-      image: heroClassroom,
-      title: "Modern Classroom",
-      category: "Facilities",
-      description: "Our state-of-the-art classrooms equipped with modern learning technology"
-    },
-    {
-      id: 2,
-      image: studentsLearning,
-      title: "Interactive Learning",
-      category: "Classes",
-      description: "Students engaged in interactive Japanese language sessions"
-    },
-    {
-      id: 3,
-      image: japaneseCulture,
-      title: "Cultural Activities",
-      category: "Events",
-      description: "Cultural immersion activities and Japanese festivals celebration"
-    },
-    {
-      id: 4,
-      image: schoolEntrance,
-      title: "School Entrance",
-      category: "Facilities",
-      description: "Welcome to Yume Japanese Language School - your gateway to Japan"
-    },
-    {
-      id: 5,
-      image: jlptPreparation,
-      title: "JLPT Preparation",
-      category: "Exams",
-      description: "Intensive JLPT preparation sessions with mock tests"
-    }
+    // Events
+    { id: 1, image: events1, title: "Japanese Quiz Contest", category: "Events", description: "Quiz contest event at Ramakrishna Mission Institute of Culture, Kolkata." },
+    { id: 2, image: events2, title: "Japanese Quiz Contest", category: "Events", description: "Our students receiving certificates in the quiz contest." },
+    { id: 3, image: events3, title: "Cultural Activities", category: "Events", description: "Celebration of Japanese festivals and cultural immersion activities." },
+    { id: 4, image: events4, title: "Study In Japan", category: "Events", description: "Life of Indian students while studying in Japan." },
+    { id: 5, image: events5, title: "Graduation Ceremony", category: "Events", description: "Highlights from the graduation ceremony." },
+    { id: 6, image: events6, title: "Tradition Day", category: "Events", description: "Exploring traditional Japanese customs." },
+    { id: 7, image: events7, title: "Community Event", category: "Events", description: "Building community spirit with enthusiastic participants." },
+    { id: 8, image: events8, title: "Connect With Personnel", category: "Events", description: "Building meaningful connections with the Consulate General of Japan in Kolkata." },
+
+    // Classes
+    { id: 9, image: classes1, title: "Offline Class", category: "Classes", description: "Face-to-face interactive sessions in the classroom." },
+    { id: 10, image: classes2, title: "Opening Ceremony", category: "Classes", description: "A memorable day with fellow students during our opening ceremony." },
+    { id: 11, image: classes3, title: "Teacher Guidance", category: "Classes", description: "Expert support during lessons and parent-teacher conferences." },
+    { id: 12, image: classes4, title: "Focused Preparation", category: "Classes", description: "Advanced preparation for JLPT and NAT exams." },
+
+    // Exams
+    { id: 13, image: exams1, title: "JLPT Mock Test", category: "Exams", description: "Simulated exams to prepare for the JLPT exam." },
+    { id: 14, image: exams2, title: "NAT Mock Test", category: "Exams", description: "Simulated exams for students preparing for the NAT exam." },
+
+    // Students
+    { id: 15, image: students1, title: "Learning Journey", category: "Students", description: "Dedicated learners at Yume Japanese Language School." },
+    { id: 16, image: students2, title: "Representing School", category: "Students", description: "Representing our school with brilliant students." },
+    { id: 17, image: students3, title: "Award Received", category: "Students", description: "Outstanding performance celebrated with awards." },
+    { id: 18, image: students4, title: "Friendship", category: "Students", description: "Building bonds while learning Japanese." },
+    { id: 19, image: students5, title: "School Program", category: "Students", description: "Collaboration with government schools." },
+    { id: 20, image: students6, title: "Faculty", category: "Students", description: "Strong initiative and responsibilities demonstrated by faculty members." }
   ];
 
-  const categories = ["All", "Facilities", "Classes", "Events", "Exams"];
+  const categories = ["All", "Events", "Classes", "Exams", "Students"];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredItems = activeCategory === "All" 
@@ -117,7 +131,7 @@ const Gallery = () => {
                   <div className="relative overflow-hidden">
                     <img
                       src={item.image}
-                      alt={item.title}
+                      alt={item.title || "Gallery Image"}
                       className="w-full h-48 sm:h-56 md:h-64 lg:h-56 xl:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />

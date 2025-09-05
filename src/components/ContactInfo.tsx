@@ -89,7 +89,7 @@ Warm regards,
     {
       icon: <Phone className="h-5 w-5 sm:h-6 sm:w-6" />,
       title: "Phone",
-      details: ["+91 80130 72585", "+91 87776 71272", "Available: 9 AM - 8 PM"],
+      details: ["+91 80130 72585","+91 86700 35037", "+91 87776 71272", "Available: 9 AM - 8 PM"],
       action: { text: "Call Now", link: "tel:+918013072585" }
     },
     {
