@@ -39,47 +39,34 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: "Anirban Mondal",
-      rating: 5,
-      text: "I'm currently studying Japanese at Yume Japanese Language School and the experience has been fantastic. The teachers are excellent—knowledgeable, patient, and make learning enjoyable.",
-      role: "Current Student",
-    },
-    {
-      name: "Rohit Sarkar",
-      rating: 5,
-      text: "The instructor is incredibly approachable and create a fun and engaging environment, even when tackling complex concepts. Their structured curriculum ensures a clear learning path.",
-      role: "JLPT Graduate",
-    },
-    {
-      name: "Suchismita Mridha",
-      rating: 5,
-      text: "My experience with Yume Japanese Language School was quite well and I've learned a lot from the teacher. Equal attention was given to every individual which is the best part of YJLS.",
-      role: "Former Student",
-    },
-    {
       name: "Ritwayan Mondal",
-      rating: 5,
-      text: "'Yume' means Dream in Japan. If you dream it you can achieve it. Jyoti Sir is so polite and humble, I advise if you check it, just one call to sir, he definitely give you real advice. By the way it's your decision to join the class...",
       role: "JLPT N5 Graduate",
+      rating: 5,
+      text: "'Yume' means Dream in Japan. If you dream it you can achieve it. Jyoti Sir is so polite and humble, I advise if you check it, just one call to sir, he definitely give you real advice. By the way it's your decision to join the class. Currently I'm still learning, still now my experience is V. good",
     },
     {
       name: "Sayandeep Biswas",
+      role: "Current N4 Student",
       rating: 5,
       text: "One of the best places you can learn japanese in West Bengal. Gayen sensei, our teacher, is also extremely open about him and knows how to make his students open up to him and get the best out of every individual.",
-      role: "Current N4 Student",
     },
     {
       name: "Rahul Roy",
+      role: "Current N4 Student",
       rating: 5,
       text: "If you want to learn Japanese, this is the best place to follow a guided learning path. The structured approach and expert guidance make it an excellent choice for all levels.",
-      role: "Current N4 Student",
+    },{
+      name: "Sumita Mondal",
+      role: "JLPT N5 Graduate",
+      rating: 5,
+      text: "Best Japanese School. This is the best school if you want to learn Japanese. So without wasting time get admitted immediately!! 🇮🇳❤️🇯🇵",
     },
     {
-      name: "Mousumi Kumar",
+      name: "Srayashi Ghosh",
+      role: "Beginner level Student",
       rating: 5,
-      text: "This is an excellent place to learn Japanese. In my case, my teacher is Jyotirmoy Gayen sensei, he is very friendly and interactive. I recommend this institution.",
-      role: "Current N5 Student",
-    }
+      text: "Amazing place to begin with learning Japanese language. With approachable and understanding teacher it becomes easy to learn and grasp a difficult language like Japanese. Highly recommended for all stages.",
+    },
   ];
 
   const courses = [
@@ -429,7 +416,7 @@ const Home = () => {
               Student Success Stories
             </h2>
             <p className="text-lg sm:text-xl px-4">
-              Real achievements from our Japanese language learners
+              Japanese learners sharing their real success and progress
             </p>
           </div>
 

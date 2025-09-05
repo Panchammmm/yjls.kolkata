@@ -8,12 +8,8 @@ import {
   Mail, 
   Clock, 
   Facebook, 
-  Instagram, 
-  Twitter, 
+  Instagram,
   MessageCircle,
-  Star,
-  Users,
-  GraduationCap
 } from "lucide-react";
 
 interface ContactAction {

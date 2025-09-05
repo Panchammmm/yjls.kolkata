@@ -36,7 +36,7 @@ const Testimonials = () => {
       name: "Suchismita Mridha",
       role: "Current N3 Student",
       rating: 5,
-      text: "My experience with Yume Japanese Language School was quite well and I've learned a lot from the teacher.....equal attention was given to every individual which is the best part of YJLS . So I would suggest if you really interested in Japanese language you should definitely go for it . It helps you to overcome your fears and helps in achieving your goals.",
+      text: "My experience with Yume Japanese Language School was quite well and I've learned a lot from the teacher. Equal attention was given to every individual which is the best part of YJLS. So I would suggest if you really interested in Japanese language you should definitely go for it. It helps you to overcome your fears and helps in achieving your goals.",
     },
     {
       name: "Khan Jaber",
