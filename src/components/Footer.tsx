@@ -59,9 +59,9 @@ const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80 text-sm">
               <li>JLPT Preparation</li>
               <li>NAT Test Coaching</li>
-              <li>Job & Resume Guidance</li>
+              <li>Scholarship Guidance</li>
               <li>Study in Japan Guidance</li>
-              <li>Scholarship in Japan Guidance</li>
+              <li>Job & Resume Guidance</li>
             </ul>
           </div>
 

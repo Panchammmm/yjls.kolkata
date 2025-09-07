@@ -88,41 +88,63 @@ const Testimonials = () => {
     },
   ];
 
+  // Updated with your Google Drive links
   const videoTestimonials = [
     {
-      name: "Sakura Tanaka",
-      role: "Former Student",
-      title: "How I passed JLPT N2 in one year",
+      name: "Sumita Mondal",
+      role: "JLPT N5 Graduate",
+      title: "My Japanese Learning Journey",
       thumbnail: "/videos/video1-thumb.jpg",
-      videoId: "abcd1234",
+      embedUrl: "https://drive.google.com/file/d/1LRJtf9pl0ZW8o3z_7_gjS3KM43lO05aP/preview",
     },
     {
-      name: "Kenji Sato",
-      role: "Business Professional",
-      title: "Learning Japanese for my career",
+      name: "Asta Es",
+      role: "Student",
+      title: "My Growth Experience",
       thumbnail: "/videos/video2-thumb.jpg",
-      videoId: "efgh5678",
+      embedUrl: "https://drive.google.com/file/d/1bW7E3udDvD9NYMBbVWhgkK3GmLoWoPAY/preview",
     },
     {
-      name: "Aiko Nakamura",
-      role: "Exchange Student",
-      title: "My study abroad experience",
+      name: "Sutapa Sardar",
+      role: "JLPT Student",
+      title: "Exam Preparation Tips",
       thumbnail: "/videos/video3-thumb.jpg",
-      videoId: "ijkl9012",
+      embedUrl: "https://drive.google.com/file/d/14jkUexeRg6LBCU5gIXr0gRV4mtwOypQF/preview",
     },
     {
-      name: "Hiroshi Yamamoto",
-      role: "JLPT N3 Graduate",
-      title: "Balancing work and study",
+      name: "Sangita Laha",
+      role: "Faculty",
+      title: "Faculty Message",
       thumbnail: "/videos/video4-thumb.jpg",
-      videoId: "mnop3456",
+      embedUrl: "https://drive.google.com/file/d/1ZzY_RKDG3I-SWIWAqSbFxqHuPqsUtVs1/preview",
     },
     {
-      name: "Yuki Kobayashi",
-      role: "Beginner Student",
-      title: "My first steps in learning Japanese",
+      name: "Saikat",
+      role: "Student",
+      title: "Learning at YJLS",
       thumbnail: "/videos/video5-thumb.jpg",
-      videoId: "qrst7890",
+      embedUrl: "https://drive.google.com/file/d/1eNBSZrv7V2KJkZMyEQPXX2RjMVIVtlW_/preview",
+    },
+    {
+      name: "Soma Ray",
+      role: "Student",
+      title: "Cultural Experience",
+      thumbnail: "/videos/video6-thumb.jpg",
+      embedUrl: "https://drive.google.com/file/d/1GAhixlXRzzMZct2VfEKDR1dpsmPHkCJj/preview",
+    },
+    {
+      name: "Student 7",
+      role: "Student",
+      title: "My Experience",
+      thumbnail: "/videos/video7-thumb.jpg",
+      embedUrl: "https://drive.google.com/file/d/16_giObaEyS6HzLdac-VP3soYAY7zIoP0/preview",
+    },
+    {
+      name: "Student 8",
+      role: "Student",
+      title: "Japanese Journey",
+      thumbnail: "/videos/video8-thumb.jpg",
+      embedUrl: "https://drive.google.com/file/d/1xrm1TpyAjVhZBhAAgyfr_Lqc1_rg7-NJ/preview",
     },
   ];
 
@@ -185,7 +207,7 @@ const Testimonials = () => {
                           <Button
                             size="icon"
                             className="rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30"
-                            onClick={() => setActiveVideo(video.videoId)}
+                            onClick={() => setActiveVideo(video.embedUrl)}
                           >
                             <Play className="h-6 w-6" />
                           </Button>
@@ -283,11 +305,11 @@ const Testimonials = () => {
 
         <div className="text-center mt-6 sm:mt-8 px-4">
           <Button asChild variant="outline" className="w-full sm:w-auto">
-            <a 
+            <a
               href="https://www.google.com/search?sca_esv=74352027cc1c8752&biw=1536&bih=776&sxsrf=AE3TifNsnlfw4Y77iQZd5ne2tW8jSNu7DQ:1756387197956&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E6oWvXHDct70AgkFqQFuUAGw05vHMsBGMTyleyUQ6KRS4dtmiOcQ35KTd_zer_v0A8096sZt4V1hx5hnMH45QS6QvMtV81rt8w7iGpobTDk4FgcFKg%3D%3D&q=Yume+Japanese+Language+School+Reviews&sa=X&ved=2ahUKEwjsv5aYzK2PAxU4h1YBHafsFboQ0bkNegQIHBAE"
               target="_blank"
               rel="noopener noreferrer"
-              >
+            >
               View Google Testimonials
             </a>
           </Button>
@@ -331,21 +353,22 @@ const Testimonials = () => {
         </div>
       </section>
 
-      {/* Video Modal */}
+      {/* Video Modal for Google Drive */}
       {activeVideo && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-2 sm:p-4">
           <div className="relative w-full max-w-4xl aspect-video">
             <iframe
               className="w-full h-full rounded-md"
-              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
-              allow="autoplay; encrypted-media"
+              src={activeVideo}
+              allow="autoplay"
               allowFullScreen
+              frameBorder="0"
             />
             <button
               onClick={() => setActiveVideo(null)}
               className="absolute -top-8 right-0 text-white hover:text-gray-300"
             >
-              <X className="w-7 h-7 sm:w-8 sm:h-8" />
+              <X className="w-7 h-7 sm:w-8" />
             </button>
           </div>
         </div>
