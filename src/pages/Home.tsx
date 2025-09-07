@@ -74,21 +74,21 @@ const Home = () => {
     {
       title: "Beginner Course (N5 Level)",
       duration: "6 months",
-      price: "₹1,000/month",
+      price: "",
       features: ["Hiragana & Katakana", "Basic Grammar", "Cultural Introduction"],
       popular: true
     },
     {
       title: "NAT Test Preparation",
       duration: "3 months",
-      price: "₹2,000/month",
+      price: "",
       features: ["Mock Tests", "Strategy Training", "Quick Results"],
       popular: false
     },
     {
       title: "Conversational Japanese",
       duration: "3 months",
-      price: "₹1,200/month",
+      price: "",
       features: ["Native Speakers", "Real Scenarios", "Pronunciation"],
       popular: false
     }
