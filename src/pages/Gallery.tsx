@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, PhoneOutgoing, Sparkles, X, Users, BookOpen, Award, Globe } from "lucide-react";
+import { ArrowRight, GraduationCap, PhoneOutgoing, Sparkles, X } from "lucide-react";
 
 // event photos
 import events1 from "@/assets/Gallery/events/photo1.jpg";
@@ -30,6 +30,7 @@ import students3 from "@/assets/Gallery/students/student3.jpg";
 import students4 from "@/assets/Gallery/students/student4.jpg";
 import students5 from "@/assets/Gallery/students/student5.jpg";
 import students6 from "@/assets/Gallery/students/student6.jpg";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -205,13 +206,15 @@ const Gallery = () => {
             Join hundreds of successful students who have achieved their Japanese language goals with us. Your success story starts here!
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button variant="secondary" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto group">
-              <a href="/contact" className="flex items-center gap-2">
-                <GraduationCap className="h-4 w-4 mr-2" />
-                Start Your Application
-                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
+            <Link to="/contact" className="w-full sm:w-auto">
+              <Button variant="secondary" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto group">
+                <div className="flex items-center gap-2 justify-center">
+                  <GraduationCap className="h-4 w-4 mr-2" />
+                  Start Your Application
+                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Button>
+            </Link>
             <Button
               variant="outline"
               size="lg"

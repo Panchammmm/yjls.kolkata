@@ -21,6 +21,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Testimonials = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
@@ -331,15 +332,14 @@ const Testimonials = () => {
             Join hundreds of successful students who have achieved their dreams with Yume Japanese Language School.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="rounded-2xl px-5 py-3 bg-white text-primary font-semibold hover:bg-white/70"
-            >
-              <a href="/courses" className="flex items-center gap-2">
-                <BookOpen className="w-5 h-5" /> View Our Courses
-              </a>
-            </Button>
+            <Link to="/courses">
+              <Button
+                size="lg"
+                className="rounded-2xl px-5 py-3 bg-white text-primary font-semibold hover:bg-white/70 w-full sm:w-auto"
+              >
+                <BookOpen className="w-5 h-5 mr-2" /> View Our Courses
+              </Button>
+            </Link>
             <Button
               asChild
               size="lg"

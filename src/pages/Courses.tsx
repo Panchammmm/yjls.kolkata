@@ -1,9 +1,8 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, BookOpen, Award, CheckCircle, PhoneOutgoing, School, BookMarked, ChevronDown } from "lucide-react";
-import jlptPreparation from "@/assets/jlpt-preparation.jpg";
-import studentsLearning from "@/assets/students-learning.jpg";
 
 const Courses = () => {
   const courses = [
@@ -23,7 +22,7 @@ const Courses = () => {
         "Interactive exercises",
         "Listening skills"
       ],
-      price: "₹1,000/month",
+      price: "",
       badge: "Most Popular"
     },
     {
@@ -41,7 +40,7 @@ const Courses = () => {
         "Writing practice",
         "Listening skills"
       ],
-      price: "₹1,500/month",
+      price: "",
       badge: "Recommended"
     },
     {
@@ -57,7 +56,7 @@ const Courses = () => {
         "Weak area identification",
         "Confidence building"
       ],
-      price: "₹2,000/month",
+      price: "",
       badge: "Exam Focus"
     },
     {
@@ -73,7 +72,7 @@ const Courses = () => {
         "Individual attention",
         "Quick result strategies"
       ],
-      price: "₹2,000/month",
+      price: "",
       badge: "Fast Track"
     },
     {
@@ -89,7 +88,7 @@ const Courses = () => {
         "Cultural etiquette",
         "Confidence building"
       ],
-      price: "₹1,200/month",
+      price: "",
       badge: "Practical"
     }
   ];
@@ -188,16 +187,16 @@ const Courses = () => {
                   Book a Demo Class
                 </a>
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-1 border-0"
-              >
-                <a href="/about" className="flex items-center gap-2">
+              <Link to="/about">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-1 border-0"
+                >
                   <School className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                  Know Our School
-                </a>
-              </Button>
+                  <span>Know Our School</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -269,12 +268,12 @@ const Courses = () => {
                         {course.price}
                       </span>
                     </div>
-                    <Button className="w-full text-sm sm:text-base py-2 sm:py-3" variant="default">
-                      <a href="/contact" className="flex items-center gap-2 justify-center w-full">
+                    <Link to="/contact" className="w-full">
+                      <Button className="w-full text-sm sm:text-base py-2 sm:py-3" variant="default">
                         <span className="hidden sm:inline">Enroll Now</span>
                         <span className="sm:hidden">Enroll</span>
-                      </a>
-                    </Button>
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -354,7 +353,7 @@ const Courses = () => {
 
           <div className="text-center mt-8 sm:mt-12">
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <a href="/contact">Still Have Questions?</a>
+              <Link to="/contact">Still Have Questions?</Link>
             </Button>
           </div>
         </div>

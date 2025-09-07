@@ -46,11 +46,11 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="hero" size="sm">
-              <a href="/contact">
+            <Link to="/contact" className="hidden sm:inline-block">
+              <Button variant="hero" size="sm">
                 Enroll Now
-              </a>
-            </Button>
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -84,11 +84,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="hero" size="sm" className="w-full transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-1 border-0">
-                  <a href="/contact">
+                <Link to="/contact" className="w-full">
+                  <Button variant="hero" size="sm" className="w-full transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-1 border-0">
                     Enroll Now
-                  </a>
-                </Button>
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

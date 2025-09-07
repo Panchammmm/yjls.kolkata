@@ -12,6 +12,7 @@ import heroImage from "@/assets/hero-classroom.jpg";
 import learningMaterials from "@/assets/learning-materials.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
 import japaneseCulture from "@/assets/japanese-culture.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const benefits = [
@@ -183,14 +184,18 @@ const Home = () => {
             Your Gateway to Global Success! Unlock opportunities in Japan with Kolkata's premier Japanese language institute.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 flex items-center justify-center">
-              <Heart className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-              <a href="/contact">Start Learning Today</a>
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 border-white text-gray-800 hover:text-gray-700 hover:bg-white">
-              <School className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-              About Our School
-            </Button>
+            <Link to="/contact" className="w-full sm:w-auto">
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 flex items-center justify-center">
+                <Heart className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                Start Learning Today
+              </Button>
+            </Link>
+            <Link to="/about" className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 border-white text-gray-800 hover:text-gray-700 hover:bg-white">
+                <School className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                About Our School
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -258,18 +263,22 @@ const Home = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full" size="sm">
-                    <a href="/courses">Learn More</a>
-                  </Button>
+                  <Link to="/courses" className="w-full">
+                    <Button className="w-full" size="sm">
+                      Learn More
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
           </div>
           
           <div className="text-center mt-8 sm:mt-12">
-            <Button asChild variant="outline" size="lg">
-              <a href="/courses">View All Courses</a>
-            </Button>
+            <Link to="/courses" className="w-full sm:w-auto">
+              <Button asChild variant="outline" size="lg">
+                View All Courses
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -474,7 +483,7 @@ const Home = () => {
 
           <div className="text-center mt-8 sm:mt-12 px-4">
             <Button asChild variant="outline" className="w-full sm:w-auto text-gray-950 bg-gray-100">
-              <a href="/testimonials">View All Testimonials & Videos</a>
+              <Link to="/testimonials">View All Testimonials & Videos</Link>
             </Button>
           </div>
         </div>
@@ -516,7 +525,7 @@ const Home = () => {
 
           <div className="text-center mt-8 sm:mt-12">
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <a href="/contact">Still Have Questions?</a>
+              <Link to="/contact">Still Have Questions?</Link>
             </Button>
           </div>
         </div>
@@ -532,17 +541,19 @@ const Home = () => {
             Join Kolkata's most trusted Japanese language school and unlock your global potential!
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-md sm:max-w-none mx-auto">
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 flex items-center justify-center">
-              <a href="/contact" className="flex items-center gap-2">
+            <Link to="/contact" className="w-full sm:w-auto">
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 flex items-center justify-center">
                 <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Start Your Application
                 <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 border-white hover:bg-white text-gray-800 hover:text-gray-700">
-              <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-              <a href="/gallery">View Our Gallery</a>
-            </Button>
+              </Button>
+            </Link>
+            <Link to="/gallery" className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 border-white hover:bg-white text-gray-800 hover:text-gray-700">
+                <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                View Our Gallery
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

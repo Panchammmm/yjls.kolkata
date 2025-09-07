@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import SiteLogo from "@/assets/site-logo.png";
 
 const Footer = () => {

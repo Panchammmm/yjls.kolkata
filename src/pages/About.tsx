@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Award, 
-  BookOpen, 
-  Globe, 
-  Target, 
+import {
+  Award,
+  BookOpen,
+  Globe,
+  Target,
   Heart,
   GraduationCap,
   TrendingUp,
@@ -15,6 +15,7 @@ import {
   ArrowRight,
   PhoneOutgoing
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import schoolEntrance from "@/assets/school-entrance.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
 
@@ -31,7 +32,7 @@ const About = () => {
     },
     {
       number: "95%",
-      label: "JLPT Success Rate", 
+      label: "JLPT Success Rate",
       description: "Exceptional success rates in japanese proficiency tests",
     },
     {
@@ -40,7 +41,7 @@ const About = () => {
       description: "Proven track record in language education",
     },
     {
-      number: "100+", 
+      number: "100+",
       label: "All Star Ratings",
       description: "Exceptional ratings across all platforms globally",
     }
@@ -97,37 +98,37 @@ const About = () => {
   ];
 
   const whyChooseFeatures = [
-  {
-    icon: <TrendingUp className="h-5 w-5 text-primary" />,
-    title: "Proven Track Record",
-    description: "Exceptional success rates in japanese proficiency tests and student satisfaction."
-  },
-  {
-    icon: <Star className="h-5 w-5 text-primary" />,
-    title: "Expert Faculty & Free Resources",
-    description: "Learn from qualified instructors and access high-quality study materials and mock tests at no extra cost."
-  },
-  {
-    icon: <Shield className="h-5 w-5 text-primary" />,
-    title: "Comprehensive Support",
-    description: "JLPT prep, scholarship advice, job coaching, and study-in-Japan assistance."
-  },
-  {
-    icon: <Globe className="h-5 w-5 text-primary" />,
-    title: "Accessible for All",
-    description: "Courses available in Bengali, Hindi, and English for students worldwide."
-  },
-  {
-    icon: <Sparkles className="h-5 w-5 text-primary" />,
-    title: "Affordable Fees",
-    description: "Top-quality programs with flexible payment plans for all learners."
-  },
-  {
-    icon: <MapPin className="h-5 w-5 text-primary" />,
-    title: "Virtual Cultural Experience",
-    description: "Interactive online events and activities to engage with Japanese culture from anywhere."
-  }
-];
+    {
+      icon: <TrendingUp className="h-5 w-5 text-primary" />,
+      title: "Proven Track Record",
+      description: "Exceptional success rates in japanese proficiency tests and student satisfaction."
+    },
+    {
+      icon: <Star className="h-5 w-5 text-primary" />,
+      title: "Expert Faculty & Free Resources",
+      description: "Learn from qualified instructors and access high-quality study materials and mock tests at no extra cost."
+    },
+    {
+      icon: <Shield className="h-5 w-5 text-primary" />,
+      title: "Comprehensive Support",
+      description: "JLPT prep, scholarship advice, job coaching, and study-in-Japan assistance."
+    },
+    {
+      icon: <Globe className="h-5 w-5 text-primary" />,
+      title: "Accessible for All",
+      description: "Courses available in Bengali, Hindi, and English for students worldwide."
+    },
+    {
+      icon: <Sparkles className="h-5 w-5 text-primary" />,
+      title: "Affordable Fees",
+      description: "Top-quality programs with flexible payment plans for all learners."
+    },
+    {
+      icon: <MapPin className="h-5 w-5 text-primary" />,
+      title: "Virtual Cultural Experience",
+      description: "Interactive online events and activities to engage with Japanese culture from anywhere."
+    }
+  ];
 
   return (
     <div className="min-h-screen">
@@ -149,20 +150,24 @@ const About = () => {
                 Established as Kolkata's premier Japanese language institute, YJLS has been transforming dreams into reality by providing world-class Japanese language education and comprehensive career support.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Button variant="hero" size="lg" className="w-full sm:w-auto group">
-                  <BookOpen className="h-4 w-4 mr-2" />
-                  View Courses
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  <Sparkles className="h-4 w-4 mr-2 pt-[1px]" />
-                  View Our Gallery
-                </Button>
+                <Link to="/courses">
+                  <Button variant="hero" size="lg" className="w-full sm:w-auto group">
+                    <BookOpen className="h-4 w-4 mr-2" />
+                    View Courses
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+                <Link to="/gallery">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                    <Sparkles className="h-4 w-4 mr-2 pt-[1px]" />
+                    View Our Gallery
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <img 
-                src={schoolEntrance} 
+              <img
+                src={schoolEntrance}
                 alt="Yume School Entrance"
                 className="rounded-lg shadow-elegant w-full h-auto"
               />
@@ -217,7 +222,7 @@ const About = () => {
               Numbers that speak for our excellence and dedication
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -356,8 +361,8 @@ const About = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <img 
-                src={studentsLearning} 
+              <img
+                src={studentsLearning}
                 alt="Students Learning"
                 className="rounded-lg shadow-soft w-full h-auto"
               />
@@ -381,22 +386,22 @@ const About = () => {
             Join hundreds of successful students who have achieved their Japanese language goals with us. Your success story starts here!
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button variant="secondary" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto group">
-              <a href="/contact" className="flex items-center gap-2">
+            <Link to="/contact">
+              <Button variant="secondary" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto group">
                 <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Start Your Application
-                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 mr-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Button
+              variant="outline"
+              size="lg"
               className="text-base sm:text-lg px-6 sm:px-8 py-3 border-white text-gray-900 hover:bg-white hover:text-gray-700 w-full sm:w-auto group"
             >
               <a href="tel:+918670035037" className="flex items-center gap-2">
                 <PhoneOutgoing className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Book a Demo Class
-                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 mr-2 group-hover:translate-x-1 transition-transform sm:hidden" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 ml-2 group-hover:translate-x-1 transition-transform sm:hidden" />
               </a>
             </Button>
           </div>

@@ -9,9 +9,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
 import { 
-  MapPin, 
-  Phone, 
-  Mail, 
   Clock, 
   Send, 
   Loader2, 
@@ -23,7 +20,6 @@ import {
   Star,
   MessageCircle,
   BookOpen,
-  GraduationCap
 } from "lucide-react";
 import { useForm } from 'react-hook-form';
 import useWeb3Forms from "@web3forms/react";

@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -53,12 +53,12 @@ const NotFound = () => {
         </p>
 
         {/* Back to Home */}
-        <a
-          href="/"
+        <Link
+          to="/"
           className="inline-block px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 bg-pink-500 hover:bg-pink-600 text-white text-sm sm:text-base md:text-lg font-semibold rounded-full shadow-md transition-all duration-300"
         >
           🏠 Take me home
-        </a>
+        </Link>
       </div>
     </div>
   );
