@@ -121,10 +121,6 @@ const Courses = () => {
       answer: "Yes! Our beginner course (N5) is designed for students with zero Japanese knowledge. We start from Hiragana and Katakana basics."
     },
     {
-      question: "What are your course fees?",
-      answer: "Beginner (N5): ₹1,000/month, Intermediate (N4): ₹1,500/month, JLPT/NAT Prep: ₹2,000/month, Conversational: ₹1,200/month. All materials included."
-    },
-    {
       question: "Do you help with studying or job in Japan?",
       answer: "Yes! We provide MEXT & other popular scholarship guidance, university application support, resume guidance and interview preparation. Many students are well satisfied with our services."
     },
