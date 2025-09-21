@@ -22,6 +22,7 @@ import studentsLearning from "@/assets/students-learning.jpg";
 import teampic1 from "@/assets/team/jyotirmoy_gayen.jpg";
 import teampic2 from "@/assets/team/samata_gayen.jpg";
 import teampic3 from "@/assets/team/pancham_sardar.jpg";
+import teampic4 from "@/assets/team/subho_roy.jpg";
 
 const About = () => {
   const stats = [
@@ -94,6 +95,14 @@ const About = () => {
       experience: "Dedicated JLPT instructor with proven techniques for exam success, helping students achieve their certification goals efficiently.",
       speciality: "Test Preparation & Grammar Mastery",
       img: teampic3,
+    },
+    {
+      name: "Subho Roy",
+      role: "Student Mentor & Teaching Associate",
+      qualification: "JLPT N4 Certified | Dynamic Teaching Approach",
+      experience: "Subho's enthusiasm and student-first approach create an encouraging environment where learners feel confident to take risks and grow.",
+      speciality: "Student Guidance & Learning Motivation",
+      img: teampic4,
     }
   ];
 
@@ -239,7 +248,7 @@ const About = () => {
 
       {/* Team */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-12 sm:mb-16">
             <div className="flex justify-center mb-4">
             </div>
@@ -251,7 +260,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {team.map((member, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:-translate-y-2">
                 <CardContent className="p-6 sm:p-8 text-center">
@@ -268,7 +277,7 @@ const About = () => {
 
                   {/* Enhanced Text Layout */}
                   <div className="space-y-3">
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-xl sm:text-[22px] font-bold text-foreground group-hover:text-primary transition-colors">
                       {member.name}
                     </h3>
                     <p className="text-sm text-gray-700 sm:text-base text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full inline-block">

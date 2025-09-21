@@ -23,6 +23,16 @@ import {
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+// thumbnails
+import apurba from "@/assets/video-thumbnails/aburba_ghosh.png";
+import ditipriya from "@/assets/video-thumbnails/ditipriya_jana.png";
+import rashmi from "@/assets/video-thumbnails/rashmi_roy.png";
+import saikat from "@/assets/video-thumbnails/saikat_mondal.png";
+import sangita from "@/assets/video-thumbnails/sangita_laha.png";
+import subhashree from "@/assets/video-thumbnails/subhashree_sardar.png";
+import sumita from "@/assets/video-thumbnails/sumita_mondal.png";
+import sutaba from "@/assets/video-thumbnails/sutaba_sardar.png";
+
 const Testimonials = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
@@ -89,62 +99,63 @@ const Testimonials = () => {
     },
   ];
 
-  // Updated with your Google Drive links
+  // Updated videoTestimonials with correct names, thumbnails, and 6-12 month learning experience
   const videoTestimonials = [
+    
     {
-      name: "Sumita Mondal",
-      role: "JLPT N5 Graduate",
-      title: "My Japanese Learning Journey",
-      thumbnail: "/videos/video1-thumb.jpg",
-      embedUrl: "https://drive.google.com/file/d/1LRJtf9pl0ZW8o3z_7_gjS3KM43lO05aP/preview",
-    },
-    {
-      name: "Asta Es",
-      role: "Student",
-      title: "My Growth Experience",
-      thumbnail: "/videos/video2-thumb.jpg",
-      embedUrl: "https://drive.google.com/file/d/1bW7E3udDvD9NYMBbVWhgkK3GmLoWoPAY/preview",
-    },
-    {
-      name: "Sutapa Sardar",
-      role: "JLPT Student",
-      title: "Exam Preparation Tips",
-      thumbnail: "/videos/video3-thumb.jpg",
+      name: "Ditipriya Jana",
+      role: "Beginner Student (6 months)",
+      title: "My First Steps in Japanese",
+      thumbnail: ditipriya,
       embedUrl: "https://drive.google.com/file/d/14jkUexeRg6LBCU5gIXr0gRV4mtwOypQF/preview",
     },
     {
-      name: "Sangita Laha",
-      role: "Faculty",
-      title: "Faculty Message",
-      thumbnail: "/videos/video4-thumb.jpg",
-      embedUrl: "https://drive.google.com/file/d/1ZzY_RKDG3I-SWIWAqSbFxqHuPqsUtVs1/preview",
+      name: "Rashmi Roy",
+      role: "JLPT N3 level Student (4 years)",
+      title: "Discovering Japan Through Language",
+      thumbnail: rashmi,
+      embedUrl: "https://drive.google.com/file/d/1bW7E3udDvD9NYMBbVWhgkK3GmLoWoPAY/preview",
     },
     {
-      name: "Saikat",
-      role: "Student",
-      title: "Learning at YJLS",
-      thumbnail: "/videos/video5-thumb.jpg",
-      embedUrl: "https://drive.google.com/file/d/1eNBSZrv7V2KJkZMyEQPXX2RjMVIVtlW_/preview",
-    },
-    {
-      name: "Soma Ray",
-      role: "Student",
-      title: "Cultural Experience",
-      thumbnail: "/videos/video6-thumb.jpg",
+      name: "Apurba Ghosh",
+      role: "Conversational Student (11 months)",
+      title: "Building Confidence in Japanese Speaking",
+      thumbnail: apurba,
       embedUrl: "https://drive.google.com/file/d/1GAhixlXRzzMZct2VfEKDR1dpsmPHkCJj/preview",
     },
     {
-      name: "Student 7",
-      role: "Student",
-      title: "My Experience",
-      thumbnail: "/videos/video7-thumb.jpg",
+      name: "Subhashree Sardar",
+      role: "N5 Graduate (7 months)",
+      title: "Successfully Passing My First JLPT",
+      thumbnail: subhashree,
+      embedUrl: "https://drive.google.com/file/d/1ZzY_RKDG3I-SWIWAqSbFxqHuPqsUtVs1/preview",
+    },
+    {
+      name: "Sutaba Sardar",
+      role: "N4 Preparation Student (10 months)",
+      title: "Preparing for My JLPT N4 Exam",
+      thumbnail: sutaba,
+      embedUrl: "https://drive.google.com/file/d/1eNBSZrv7V2KJkZMyEQPXX2RjMVIVtlW_/preview",
+    },
+    {
+      name: "Sangita Laha",
+      role: "Advanced Student (12 months)",
+      title: "One Year of Amazing Progress",
+      thumbnail: sangita,
       embedUrl: "https://drive.google.com/file/d/16_giObaEyS6HzLdac-VP3soYAY7zIoP0/preview",
     },
     {
-      name: "Student 8",
-      role: "Student",
-      title: "Japanese Journey",
-      thumbnail: "/videos/video8-thumb.jpg",
+      name: "Saikat Mondal",
+      role: "Intermediate Student (9 months)",
+      title: "How YJLS Changed My Learning Style",
+      thumbnail: saikat,
+      embedUrl: "https://drive.google.com/file/d/1LRJtf9pl0ZW8o3z_7_gjS3KM43lO05aP/preview",
+    },
+    {
+      name: "Sumita Mondal",
+      role: "N5 Level Student (8 months)",
+      title: "From Zero to Confident Conversations",
+      thumbnail: sumita,
       embedUrl: "https://drive.google.com/file/d/1xrm1TpyAjVhZBhAAgyfr_Lqc1_rg7-NJ/preview",
     },
   ];
