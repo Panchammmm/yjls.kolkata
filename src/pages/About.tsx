@@ -98,7 +98,7 @@ const About = () => {
     },
     {
       name: "Subho Roy",
-      role: "Student Mentor & Teaching Associate",
+      role: "Mentor & Teaching Associate",
       qualification: "JLPT N4 Certified | Dynamic Teaching Approach",
       experience: "Subho's enthusiasm and student-first approach create an encouraging environment where learners feel confident to take risks and grow.",
       speciality: "Student Guidance & Learning Motivation",

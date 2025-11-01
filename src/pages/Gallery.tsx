@@ -6,12 +6,16 @@ import { ArrowRight, GraduationCap, PhoneOutgoing, Sparkles, X } from "lucide-re
 // event photos
 import events1 from "@/assets/Gallery/events/photo1.jpg";
 import events2 from "@/assets/Gallery/events/photo2.jpg";
-import events3 from "@/assets/Gallery/events/photo3.jpg";
+// import events3 from "@/assets/Gallery/events/photo3.jpg";
 import events4 from "@/assets/Gallery/events/photo4.jpg";
-import events5 from "@/assets/Gallery/events/photo5.jpg";
+// import events5 from "@/assets/Gallery/events/photo5.jpg";
 import events6 from "@/assets/Gallery/events/photo6.jpg";
 import events7 from "@/assets/Gallery/events/photo7.jpg";
 import events8 from "@/assets/Gallery/events/photo8.jpg";
+import events9 from "@/assets/Gallery/events/photo9.jpg";
+import events10 from "@/assets/Gallery/events/photo10.jpg";
+import events11 from "@/assets/Gallery/events/photo11.jpg";
+import events12 from "@/assets/Gallery/events/photo12.jpg";
 
 // classes photos
 import classes1 from "@/assets/Gallery/classes/class1.jpg";
@@ -39,30 +43,32 @@ const Gallery = () => {
     // Events
     { id: 1, image: events1, title: "Japanese Quiz Contest", category: "Events", description: "Quiz contest event at Ramakrishna Mission Institute of Culture, Kolkata." },
     { id: 2, image: events2, title: "Japanese Quiz Contest", category: "Events", description: "Our students receiving certificates in the quiz contest." },
-    { id: 3, image: events3, title: "Cultural Activities", category: "Events", description: "Celebration of Japanese festivals and cultural immersion activities." },
-    { id: 4, image: events4, title: "Study In Japan", category: "Events", description: "Life of Indian students while studying in Japan." },
-    { id: 5, image: events5, title: "Graduation Ceremony", category: "Events", description: "Highlights from the graduation ceremony." },
-    { id: 6, image: events6, title: "Tradition Day", category: "Events", description: "Exploring traditional Japanese customs." },
-    { id: 7, image: events7, title: "Community Event", category: "Events", description: "Building community spirit with enthusiastic participants." },
-    { id: 8, image: events8, title: "Connect With Personnel", category: "Events", description: "Building meaningful connections with the Consulate General of Japan in Kolkata." },
+    { id: 3, image: events4, title: "Study In Japan", category: "Events", description: "Life of Indian students while studying in Japan." },
+    { id: 4, image: events6, title: "Tradition Day", category: "Events", description: "Exploring traditional Japanese customs." },
+    { id: 5, image: events7, title: "Community Event", category: "Events", description: "Building community spirit with enthusiastic participants." },
+    { id: 6, image: events8, title: "Connect With Personnel", category: "Events", description: "Building meaningful connections with the Consulate General of Japan in Kolkata." },
+    { id: 7, image: events9, title: "Picnic Memories", category: "Events", description: "Games, laughter, and friendship at the YJLS picnic." },
+    { id: 8, image: events10, title: "Picnic Feast", category: "Events", description: "Joyful feast moments from our recent student & teacher picnic." },
+    { id: 9, image: events11, title: "Teachers' Day Highlights", category: "Events", description: "Special moments from Teachers' Day at Yume." },
+    { id: 10, image: events12, title: "Teachers' Day Celebration", category: "Events", description: "Our students honoring teachers with gratitude and performances." },
 
     // Classes
-    { id: 9, image: classes1, title: "Offline Class", category: "Classes", description: "Face-to-face interactive sessions in the classroom." },
-    { id: 10, image: classes2, title: "Opening Ceremony", category: "Classes", description: "A memorable day with fellow students during our opening ceremony." },
-    { id: 11, image: classes3, title: "Teacher Guidance", category: "Classes", description: "Expert support during lessons and parent-teacher conferences." },
-    { id: 12, image: classes4, title: "Focused Preparation", category: "Classes", description: "Advanced preparation for JLPT and NAT exams." },
+    { id: 11, image: classes1, title: "Offline Class", category: "Classes", description: "Face-to-face interactive sessions in the classroom." },
+    { id: 12, image: classes2, title: "Opening Ceremony", category: "Classes", description: "A memorable day with fellow students during our opening ceremony." },
+    { id: 13, image: classes3, title: "Teacher Guidance", category: "Classes", description: "Expert support during lessons and parent-teacher conferences." },
+    { id: 14, image: classes4, title: "Focused Preparation", category: "Classes", description: "Advanced preparation for JLPT and NAT exams." },
 
     // Exams
-    { id: 13, image: exams1, title: "JLPT Mock Test", category: "Exams", description: "Simulated exams to prepare for the JLPT exam." },
-    { id: 14, image: exams2, title: "NAT Mock Test", category: "Exams", description: "Simulated exams for students preparing for the NAT exam." },
+    { id: 15, image: exams1, title: "JLPT Mock Test", category: "Exams", description: "Simulated exams to prepare for the JLPT exam." },
+    { id: 16, image: exams2, title: "NAT Mock Test", category: "Exams", description: "Simulated exams for students preparing for the NAT exam." },
 
     // Students
-    { id: 15, image: students1, title: "Learning Journey", category: "Students", description: "Dedicated learners at Yume Japanese Language School." },
-    { id: 16, image: students2, title: "Representing School", category: "Students", description: "Representing our school with brilliant students." },
-    { id: 17, image: students3, title: "Award Received", category: "Students", description: "Outstanding performance celebrated with awards." },
-    { id: 18, image: students4, title: "Friendship", category: "Students", description: "Building bonds while learning Japanese." },
-    { id: 19, image: students5, title: "School Program", category: "Students", description: "Collaboration with government schools." },
-    { id: 20, image: students6, title: "Faculty", category: "Students", description: "Strong initiative and responsibilities demonstrated by faculty members." }
+    { id: 17, image: students1, title: "Learning Journey", category: "Students", description: "Dedicated learners at Yume Japanese Language School." },
+    { id: 18, image: students2, title: "Representing School", category: "Students", description: "Representing our school with brilliant students." },
+    { id: 19, image: students3, title: "Award Received", category: "Students", description: "Outstanding performance celebrated with awards." },
+    { id: 20, image: students4, title: "Friendship", category: "Students", description: "Building bonds while learning Japanese." },
+    { id: 21, image: students5, title: "School Program", category: "Students", description: "Collaboration with government schools." },
+    { id: 22, image: students6, title: "Faculty", category: "Students", description: "Strong initiative and responsibilities demonstrated by faculty members." }
   ];
 
   const categories = ["All", "Events", "Classes", "Exams", "Students"];
