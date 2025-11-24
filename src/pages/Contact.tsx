@@ -24,7 +24,7 @@ import {
 import { useForm } from 'react-hook-form';
 import useWeb3Forms from "@web3forms/react";
 import ContactInfo from "../components/ContactInfo";
-import { createHtmlEmailTemplate, contactInfo, additionalServices, timeSlots } from "../components/contactData";
+import { additionalServices, timeSlots } from "../components/contactData";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -35,7 +35,8 @@ const Contact = () => {
   const [preferredTime, setPreferredTime] = useState("");
 
   // Your Web3Forms access key
-  const accessKey = "5516de44-fd98-4a9a-ada1-d95fcb67574b";
+  // const accessKey = "762e360d-5b0d-40a9-9853-783c81ec5a60"; // pinaki
+  const accessKey = "5516de44-fd98-4a9a-ada1-d95fcb67574b"; // yjls
 
   // Watch form values
   const courseValue = watch("course");
@@ -75,28 +76,22 @@ const Contact = () => {
 
   const handleFormSubmit = async (formData) => {
     const { name, email, phone, course, message, age, experience, urgency, newsletter } = formData;
-    
-    const htmlMessage = createHtmlEmailTemplate({
-      name, email, phone, age, course, experience, 
-      selectedServices, urgency, preferredTime, message, newsletter
-    });
 
     const enhancedData = {
-      name,
-      email,
-      phone,
-      age: age || "Not provided",
-      course: course || "General Inquiry",
-      experience: experience || "Not specified",
-      message: message || "No specific message provided",
-      urgency: urgency || "Medium",
-      preferred_time: preferredTime || "Any time",
-      additional_services: selectedServices.join(", ") || "None selected",
-      newsletter_optin: newsletter ? "Yes" : "No",
-      subject: `🎌 New Student Inquiry - ${name} (${course || "General"})`,
-      html: htmlMessage,
+      // name,
+      // email,
+      // phone,
+      // age: age || "Not provided",
+      // course: course || "General Inquiry",
+      // experience: experience || "Not specified",
+      // message: message || "No specific message provided",
+      // urgency: urgency || "Medium",
+      // preferred_time: preferredTime || "Any time",
+      // additional_services: selectedServices.join(", ") || "None selected",
+      // newsletter_optin: newsletter ? "Yes" : "No",
+      // subject: `🎌 New Student Inquiry - ${name} (${course || "General"})`,
       text: `
-New Student Inquiry - Yume Japanese Language School
+🎌 New Student Inquiry - Yume Japanese Language School
 
 Personal Information:
 Name: ${name}
