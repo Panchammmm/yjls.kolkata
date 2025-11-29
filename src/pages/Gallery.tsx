@@ -35,6 +35,7 @@ import students4 from "@/assets/Gallery/students/student4.jpg";
 import students5 from "@/assets/Gallery/students/student5.jpg";
 import students6 from "@/assets/Gallery/students/student6.jpg";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -79,6 +80,14 @@ const Gallery = () => {
     : galleryItems.filter(item => item.category === activeCategory);
 
   return (
+    <>
+    <SEO 
+        title="School Gallery - Events, Classes & Student Life"
+        description="Explore Yume Japanese Language School through our gallery. View photos of classroom sessions, JLPT mock tests, cultural events, picnics, Teachers' Day celebrations, and our vibrant student community in Kolkata."
+        keywords="Japanese school gallery Kolkata, Japanese class photos, JLPT exam preparation, Japanese cultural events Kolkata, student activities"
+        url="https://yjls-kolkata.in/gallery"
+      />
+
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-accent">
@@ -236,6 +245,7 @@ const Gallery = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

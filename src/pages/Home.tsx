@@ -13,6 +13,7 @@ import learningMaterials from "@/assets/learning-materials.jpg";
 import studentsLearning from "@/assets/students-learning.jpg";
 import japaneseCulture from "@/assets/japanese-culture.jpg";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const Home = () => {
   const benefits = [
@@ -161,6 +162,13 @@ const Home = () => {
   ];
 
   return (
+    <>
+    <SEO 
+        title="Kolkata's Best Japanese Language School"
+        description="Learn Japanese at Yume Japanese Language School in Kolkata. Expert JLPT preparation (N5-N3), small batches, certified teachers. Join the best Japanese classes in Sonarpur, Kolkata. Affordable fees starting ₹1000/month."
+        keywords="Japanese language school Kolkata, JLPT classes Kolkata, learn Japanese Kolkata, Japanese course Sonarpur, Japanese language institute, best Japanese classes near me"
+        url="https://yjls-kolkata.in/"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden">
@@ -554,6 +562,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

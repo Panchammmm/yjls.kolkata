@@ -32,6 +32,7 @@ import sangita from "@/assets/video-thumbnails/sangita_laha.png";
 import subhashree from "@/assets/video-thumbnails/subhashree_sardar.png";
 import sumita from "@/assets/video-thumbnails/sumita_mondal.png";
 import sutaba from "@/assets/video-thumbnails/sutaba_sardar.png";
+import SEO from "@/components/SEO";
 
 const Testimonials = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
@@ -161,6 +162,14 @@ const Testimonials = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="Student Success Stories & Testimonials"
+        description="Read success stories from our students who passed JLPT exams and achieved their Japanese language goals at Yume. Watch video testimonials and reviews from N5, N4, and N3 graduates studying in Kolkata."
+        keywords="Japanese school reviews Kolkata, JLPT success stories, student testimonials, Japanese course reviews, Yume school feedback"
+        url="https://yjls-kolkata.in/testimonials"
+      />
+
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-12 sm:py-20 bg-gradient-accent">
@@ -385,6 +394,7 @@ const Testimonials = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

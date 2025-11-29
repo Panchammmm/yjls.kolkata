@@ -1,3 +1,7 @@
+# robots.txt for https://yjls-kolkata.in/
+# Last updated: 2025-11-29
+
+# Allow all major bots access to your site
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +14,15 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# Allow all other bots
 User-agent: *
 Allow: /
+
+# Block common sensitive/admin areas (customize if needed)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Point search engines to your sitemap (very important!)
+Sitemap: https://yjls-kolkata.in/sitemap.xml

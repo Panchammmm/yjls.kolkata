@@ -25,6 +25,7 @@ import { useForm } from 'react-hook-form';
 import useWeb3Forms from "@web3forms/react";
 import ContactInfo from "../components/ContactInfo";
 import { additionalServices, timeSlots } from "../components/contactData";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -131,6 +132,14 @@ Timestamp: ${new Date().toLocaleString()}
   };
 
   return (
+    <>
+      <SEO
+        title="Contact Us - Enroll Now | Location & Fees"
+        description="Contact Yume Japanese Language School in Sonarpur Rajpur, Kolkata. Call/ Whatsapp +91-8670035037 for admissions. Visit us for demo classes, course details, and enrollment. Flexible batch timings available."
+        keywords="Japanese school contact Kolkata, Yume admission enquiry, Japanese class enrollment, Sonarpur Japanese school, Japanese course admission Kolkata"
+        url="https://yjls-kolkata.in/contact"
+      />
+
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-accent">
@@ -487,6 +496,7 @@ Timestamp: ${new Date().toLocaleString()}
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, BookOpen, Award, CheckCircle, PhoneOutgoing, School, BookMarked, ChevronDown } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Courses = () => {
   const courses = [
@@ -131,6 +132,14 @@ const Courses = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="Japanese Language Courses - JLPT N5, N4, N3 & NAT Preparation"
+        description="Explore our comprehensive Japanese language courses. JLPT N5 beginner to N3 intermediate levels. Includes mock tests, study materials, and cultural activities. 6-month duration with expert guidance."
+        keywords="JLPT N5 course Kolkata, JLPT N4 classes, Japanese N3 preparation, Japanese language course fees, JLPT coaching Kolkata"
+        url="https://yjls-kolkata.in/courses"
+      />
+
     <div className="min-h-screen">
       {/* Enhanced Full-Screen Hero Section */}
       <section className="relative flex items-center justify-center bg-gradient-accent overflow-hidden">
@@ -355,6 +364,7 @@ const Courses = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

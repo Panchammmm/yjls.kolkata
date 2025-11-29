@@ -23,6 +23,7 @@ import teampic1 from "@/assets/team/jyotirmoy_gayen.jpg";
 import teampic2 from "@/assets/team/samata_gayen.jpg";
 import teampic3 from "@/assets/team/pancham_sardar.jpg";
 import teampic4 from "@/assets/team/subho_roy.jpg";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const stats = [
@@ -140,6 +141,14 @@ const About = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="About Us - Our Story & Mission"
+        description="Yume Japanese Language School was founded with a passion for teaching Japanese language and culture in Kolkata. Learn about our experienced JLPT-certified instructors, teaching methodology, and our commitment to student success."
+        keywords="about Yume Japanese school, Japanese language teachers Kolkata, certified Japanese instructors, Japanese school history, our mission"
+        url="https://yjls-kolkata.in/about"
+      />
+
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-accent">
@@ -417,6 +426,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
