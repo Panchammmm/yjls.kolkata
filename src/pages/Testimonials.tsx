@@ -365,7 +365,7 @@ const Testimonials = () => {
               size="lg"
               className="rounded-2xl px-5 py-3 border bg-transparent border-white text-white hover:bg-white/20"
             >
-              <a href="tel:+918670035037" className="flex items-center gap-2">
+              <a href="tel:+916290106712" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" /> Book a Free Class
               </a>
             </Button>

@@ -187,7 +187,7 @@ const Courses = () => {
                 size="lg"
                 className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-1 bg-gradient-to-r from-primary to-secondary border-0"
               >
-                <a href="tel:+918670035037" className="flex items-center gap-2">
+                <a href="tel:+916290106712" className="flex items-center gap-2">
                   <PhoneOutgoing className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                   Book a Demo Class
                 </a>

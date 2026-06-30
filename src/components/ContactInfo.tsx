@@ -85,8 +85,8 @@ Warm regards,
     {
       icon: <Phone className="h-5 w-5 sm:h-6 sm:w-6" />,
       title: "Phone",
-      details: ["+91 80130 72585","+91 86700 35037", "+91 87776 71272", "Available: 9 AM - 8 PM"],
-      action: { text: "Call Now", link: "tel:+918013072585" }
+      details: ["+91 62901 06712","+91 80130 72585", "Available: 9 AM - 8 PM"],
+      action: { text: "Call Now", link: "tel:+916290106712" }
     },
     {
       icon: <Mail className="h-5 w-5 sm:h-6 sm:w-6" />,
@@ -98,7 +98,7 @@ Warm regards,
       icon: <Clock className="h-5 w-5 sm:h-6 sm:w-6" />,
       title: "Hours",
       details: ["Mon - Sat: 9:00 AM - 8:00 PM", "Sunday: 10:00 AM - 6:00 PM"],
-      action: { text: "Book a Free Trial", link: "tel:+918670035037" }
+      action: { text: "Book a Free Trial", link: "tel:+916290106712" }
     }
   ];
 
@@ -163,7 +163,7 @@ Warm regards,
               </Button>
             </a>
             <a
-              href="https://wa.me/918670035037?text=Hello%20YJLS%21%20I%20visited%20your%20website%20and%20really%20liked%20your%20course%20offerings.%20Could%20we%20discuss%20the%20course%20timings%20and%20fee%20structure%20to%20help%20me%20choose%20the%20best%20option%3F"
+              href="https://wa.me/916290106712?text=Hello%20YJLS%21%20I%20visited%20your%20website%20and%20really%20liked%20your%20course%20offerings.%20Could%20we%20discuss%20the%20course%20timings%20and%20fee%20structure%20to%20help%20me%20choose%20the%20best%20option%3F"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-2 sm:p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group min-h-[44px]"
@@ -171,23 +171,7 @@ Warm regards,
               <div className="flex items-center gap-2 min-w-0 flex-1">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0"></div>
                 <span className="text-green-700 font-medium text-xs sm:text-sm truncate">
-                  +91 8670035037
-                </span>
-              </div>
-              <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700 h-8 px-2 sm:px-3 text-xs sm:text-sm flex-shrink-0 ml-2">
-                Chat Now
-              </Button>
-            </a>
-            <a
-              href="https://wa.me/918777671272?text=Hello%20YJLS%21%20I%20visited%20your%20website%20and%20really%20liked%20your%20course%20offerings.%20Could%20we%20discuss%20the%20course%20timings%20and%20fee%20structure%20to%20help%20me%20choose%20the%20best%20option%3F"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between p-2 sm:p-3 bg-green-100 rounded-lg hover:bg-green-200 transition-colors group min-h-[44px]"
-            >
-              <div className="flex items-center gap-2 min-w-0 flex-1">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0"></div>
-                <span className="text-green-700 font-medium text-xs sm:text-sm truncate">
-                  +91 87776 71272
+                  +91 6290106712
                 </span>
               </div>
               <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700 h-8 px-2 sm:px-3 text-xs sm:text-sm flex-shrink-0 ml-2">

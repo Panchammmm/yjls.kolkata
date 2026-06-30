@@ -235,7 +235,7 @@ const Gallery = () => {
               size="lg"
               className="text-base sm:text-lg px-6 sm:px-8 py-3 border-white text-gray-900 hover:bg-white hover:text-gray-700 w-full sm:w-auto group"
             >
-              <a href="tel:+918670035037" className="flex items-center gap-2">
+              <a href="tel:+916290106712" className="flex items-center gap-2">
                 <PhoneOutgoing className="h-4 w-4 mr-2" />
                 Book a Demo Class
                 <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform sm:hidden" />

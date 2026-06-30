@@ -21,6 +21,9 @@
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
 
+    /* Silence deprecation for baseUrl until TS 7.0 migration */
+    "ignoreDeprecations": "6.0",
+
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

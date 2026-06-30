@@ -55,8 +55,8 @@ export const contactInfo: ContactInfoItem[] = [
   {
     icon: "Phone",
     title: "Phone",
-    details: ["+91 80130 72585", "+91 87776 71272", "Available: 9 AM - 10 PM"],
-    action: { text: "Call Now", link: "tel:+918013072585" }
+    details: ["+91 62901 06712", "+91 80130 72585", "Available: 9 AM - 10 PM"],
+    action: { text: "Call Now", link: "tel:+916290106712" }
   },
   {
     icon: "Mail",
@@ -68,7 +68,7 @@ export const contactInfo: ContactInfoItem[] = [
     icon: "Clock",
     title: "Hours",
     details: ["Mon - Sat: 9:00 AM - 8:00 PM", "Sunday: 10:00 AM - 6:00 PM"],
-    action: { text: "Book a Free Trial", link: "tel:+918670035037" }
+    action: { text: "Book a Free Trial", link: "tel:+916290106712" }
   }
 ];
 

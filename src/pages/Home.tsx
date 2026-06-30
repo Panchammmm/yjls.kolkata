@@ -97,7 +97,7 @@ const Home = () => {
 
   const stats = [
     {
-      number: "160+",
+      number: "200+",
       label: "Students Taught",
       description: "From beginners to confident Japanese speakers",
     },
