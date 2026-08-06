@@ -54,7 +54,7 @@ const Gallery = () => {
     { id: 10, image: events12, title: "Teachers' Day Celebration", category: "Events", description: "Our students honoring teachers with gratitude and performances." },
 
     // Classes
-    { id: 11, image: classes1, title: "Offline Class", category: "Classes", description: "Face-to-face interactive sessions in the classroom." },
+    { id: 11, image: classes1, title: "Class", category: "Classes", description: "Face-to-face interactive sessions in the classroom." },
     { id: 12, image: classes2, title: "Opening Ceremony", category: "Classes", description: "A memorable day with fellow students during our opening ceremony." },
     { id: 13, image: classes3, title: "Teacher Guidance", category: "Classes", description: "Expert support during lessons and parent-teacher conferences." },
     { id: 14, image: classes4, title: "Focused Preparation", category: "Classes", description: "Advanced preparation for JLPT and NAT exams." },

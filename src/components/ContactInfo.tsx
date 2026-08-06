@@ -40,7 +40,7 @@ Could you please provide me with detailed information about:
 ✅ Course fees and payment options
 ✅ JLPT exam preparation
 ✅ Availability of free trial classes
-✅ Online/offline class options
+✅ Online class option
 
 Personal Details:
 Name: [Your Name]
